@@ -11,6 +11,11 @@
 		E1CA502A1989E78600A8E050 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CA50271989E78600A8E050 /* Default.png */; };
 		E1CA502B1989E78600A8E050 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CA50281989E78600A8E050 /* Default@2x.png */; };
 		E1CA502E1989EDDB00A8E050 /* UIImage+LG.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA502D1989EDDB00A8E050 /* UIImage+LG.m */; };
+		E1CA5031198A19E600A8E050 /* UIBarButtonItem+LG.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5030198A19E600A8E050 /* UIBarButtonItem+LG.m */; };
+		E1CA504F198A20B500A8E050 /* IWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5035198A20B500A8E050 /* IWHomeViewController.m */; };
+		E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA503B198A20B500A8E050 /* IWMeViewController.m */; };
+		E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5041198A20B500A8E050 /* IWMessageViewController.m */; };
+		E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */; };
 		E1FDFA1D196A85A300B40A48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FDFA1C196A85A300B40A48 /* Foundation.framework */; };
 		E1FDFA1F196A85A300B40A48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FDFA1E196A85A300B40A48 /* CoreGraphics.framework */; };
 		E1FDFA21196A85A300B40A48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FDFA20196A85A300B40A48 /* UIKit.framework */; };
@@ -43,6 +48,16 @@
 		E1CA50281989E78600A8E050 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E1CA502C1989EDDB00A8E050 /* UIImage+LG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LG.h"; sourceTree = "<group>"; };
 		E1CA502D1989EDDB00A8E050 /* UIImage+LG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LG.m"; sourceTree = "<group>"; };
+		E1CA502F198A19E600A8E050 /* UIBarButtonItem+LG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LG.h"; sourceTree = "<group>"; };
+		E1CA5030198A19E600A8E050 /* UIBarButtonItem+LG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LG.m"; sourceTree = "<group>"; };
+		E1CA5034198A20B500A8E050 /* IWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWHomeViewController.h; sourceTree = "<group>"; };
+		E1CA5035198A20B500A8E050 /* IWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWHomeViewController.m; sourceTree = "<group>"; };
+		E1CA503A198A20B500A8E050 /* IWMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMeViewController.h; sourceTree = "<group>"; };
+		E1CA503B198A20B500A8E050 /* IWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMeViewController.m; sourceTree = "<group>"; };
+		E1CA5040198A20B500A8E050 /* IWMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageViewController.h; sourceTree = "<group>"; };
+		E1CA5041198A20B500A8E050 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
+		E1CA504B198A20B500A8E050 /* IWSqaureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSqaureViewController.h; sourceTree = "<group>"; };
+		E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSqaureViewController.m; sourceTree = "<group>"; };
 		E1FDFA19196A85A300B40A48 /* LetsGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FDFA1C196A85A300B40A48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E1FDFA1E196A85A300B40A48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +104,138 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1CA5032198A20B500A8E050 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA5033198A20B500A8E050 /* Controller */,
+				E1CA5036198A20B500A8E050 /* Model */,
+				E1CA5037198A20B500A8E050 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		E1CA5033198A20B500A8E050 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA5034198A20B500A8E050 /* IWHomeViewController.h */,
+				E1CA5035198A20B500A8E050 /* IWHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1CA5036198A20B500A8E050 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1CA5037198A20B500A8E050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1CA5038198A20B500A8E050 /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA5039198A20B500A8E050 /* Controller */,
+				E1CA503C198A20B500A8E050 /* Model */,
+				E1CA503D198A20B500A8E050 /* View */,
+			);
+			path = "Me(我)";
+			sourceTree = "<group>";
+		};
+		E1CA5039198A20B500A8E050 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA503A198A20B500A8E050 /* IWMeViewController.h */,
+				E1CA503B198A20B500A8E050 /* IWMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1CA503C198A20B500A8E050 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1CA503D198A20B500A8E050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1CA503E198A20B500A8E050 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA503F198A20B500A8E050 /* Controller */,
+				E1CA5042198A20B500A8E050 /* Model */,
+				E1CA5043198A20B500A8E050 /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		E1CA503F198A20B500A8E050 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA5040198A20B500A8E050 /* IWMessageViewController.h */,
+				E1CA5041198A20B500A8E050 /* IWMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1CA5042198A20B500A8E050 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1CA5043198A20B500A8E050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1CA5049198A20B500A8E050 /* Square(广场) */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA504A198A20B500A8E050 /* Controller */,
+				E1CA504D198A20B500A8E050 /* Model */,
+				E1CA504E198A20B500A8E050 /* View */,
+			);
+			path = "Square(广场)";
+			sourceTree = "<group>";
+		};
+		E1CA504A198A20B500A8E050 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA504B198A20B500A8E050 /* IWSqaureViewController.h */,
+				E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1CA504D198A20B500A8E050 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1CA504E198A20B500A8E050 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E1FDFA10196A85A300B40A48 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +269,11 @@
 		E1FDFA22196A85A300B40A48 /* LetsGo */ = {
 			isa = PBXGroup;
 			children = (
+				E1CA5032198A20B500A8E050 /* Home(首页) */,
+				E1CA5038198A20B500A8E050 /* Me(我) */,
+				E1CA503E198A20B500A8E050 /* Message(消息) */,
+				E1CA5049198A20B500A8E050 /* Square(广场) */,
 				E1FDFA4D196A8E7400B40A48 /* Other(其他) */,
-				E1FDFA4C196A8E5900B40A48 /* Home(首页) */,
 				E1FDFA4B196A8E5000B40A48 /* Main(主要) */,
 				E1FDFA23196A85A300B40A48 /* Supporting Files */,
 			);
@@ -173,13 +323,6 @@
 			path = "Main(主要)";
 			sourceTree = "<group>";
 		};
-		E1FDFA4C196A8E5900B40A48 /* Home(首页) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Home(首页)";
-			sourceTree = "<group>";
-		};
 		E1FDFA4D196A8E7400B40A48 /* Other(其他) */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +330,8 @@
 				E1FDFA2C196A85A300B40A48 /* LGAppDelegate.m */,
 				E1CA502C1989EDDB00A8E050 /* UIImage+LG.h */,
 				E1CA502D1989EDDB00A8E050 /* UIImage+LG.m */,
+				E1CA502F198A19E600A8E050 /* UIBarButtonItem+LG.h */,
+				E1CA5030198A19E600A8E050 /* UIBarButtonItem+LG.m */,
 			);
 			path = "Other(其他)";
 			sourceTree = "<group>";
@@ -315,11 +460,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */,
 				E1CA502E1989EDDB00A8E050 /* UIImage+LG.m in Sources */,
+				E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */,
 				E1FDFA5B196A905000B40A48 /* LGNavgationController.m in Sources */,
 				E1FDFA29196A85A300B40A48 /* main.m in Sources */,
+				E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */,
+				E1CA504F198A20B500A8E050 /* IWHomeViewController.m in Sources */,
 				E1FDFA56196A8FB800B40A48 /* LGTabBarController.m in Sources */,
 				E1FDFA2D196A85A300B40A48 /* LGAppDelegate.m in Sources */,
+				E1CA5031198A19E600A8E050 /* UIBarButtonItem+LG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import "LGTabBarController.h"
+#import "UIImage+LG.h"
+#import "LGNavgationController.h"
 
 @interface LGTabBarController ()
 
@@ -28,27 +30,6 @@
     
     UIViewController *v1 = [[UIViewController alloc]init];
     v1.view.backgroundColor = [UIColor redColor];
-////    v1.title = @"首页";
-//    v1.tabBarItem.title = @"123";
-//
-//         v1.tabBarItem.image = [UIImage imageNamed:@"tabbar_music" ];
-//  
-//    
-//    if (iOS7) {
-//        v1.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar_music_selected" ] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    } else{
-//        v1.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_music_selected" ];
-//    }
-//
-//    UIViewController *v2 = [[UIViewController alloc]init];
-//    v2.view.backgroundColor = [UIColor blueColor];
-//    v2.tabBarItem.title = @"消息";
-//    v2.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
-//    v2.tabBarItem.selectedImage = [UIImage imageNamed:@"tabbar_profile_selected"];
-//    
-//    self.viewControllers = @[v1,v2];
-//    
-//    [self addChildViewController:v1 title:@"123" imageName:@"tabbar_music" selectedImageName:@"tabbar_music_selected"];
     
     [self addChildViewController:v1 title:@"123" imageName:@"tabbar_music" selectedImageName:@"tabbar_music_selected"];
     
@@ -62,16 +43,16 @@
     //    v1.title = @"首页";
     childController.tabBarItem.title = title;
     
-    childController.tabBarItem.image = [UIImage imageNamed:imageName];
+    childController.tabBarItem.image = [UIImage imageWithNamed:imageName];
     
     
     if (iOS7) {
-        childController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        childController.tabBarItem.selectedImage = [[UIImage imageWithNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     } else{
-        childController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
+        childController.tabBarItem.selectedImage = [UIImage imageWithNamed:selectedImageName];
     }
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:childController];
+    LGNavgationController *nav = [[LGNavgationController alloc]initWithRootViewController:childController];
     [self addChildViewController:nav];
     
 }

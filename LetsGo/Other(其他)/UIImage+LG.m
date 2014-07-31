@@ -9,5 +9,18 @@
 #import "UIImage+LG.h"
 
 @implementation UIImage (LG)
-
++ (UIImage *)imageWithNamed:(NSString *)name
+{
+    if (iOS7) {
+        NSString *ios7Name = [name stringByAppendingString:@"_os7"];
+        UIImage *image = [UIImage imageNamed:ios7Name];
+        if (image ==nil) {
+            image = [UIImage imageNamed:name];
+        }
+        return image;
+    } else
+    {
+        return [UIImage imageNamed:name];
+    }
+}
 @end

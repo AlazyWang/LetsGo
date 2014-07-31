@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (LG)
-
++ (UIImage *)imageWithNamed:(NSString *)name;
 @end
