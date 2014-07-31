@@ -7,14 +7,22 @@
 //
 
 #import "LGAppDelegate.h"
+#import "LGTabBarController.h"
 
 @implementation LGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [UIApplication sharedApplication].statusBarHidden = NO;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    LGTabBarController *barController = [[LGTabBarController alloc]init];
+
+    [self.window setRootViewController:barController];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
