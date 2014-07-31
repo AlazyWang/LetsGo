@@ -10,6 +10,11 @@
 #import "UIImage+LG.h"
 #import "LGNavgationController.h"
 
+#import "IWHomeViewController.h"
+#import "IWMessageViewController.h"
+#import "IWSqaureViewController.h"
+#import "IWMeViewController.h"
+
 @interface LGTabBarController ()
 
 @end
@@ -28,14 +33,23 @@
 - (void)addChildAllViewController
 {
     
-    UIViewController *v1 = [[UIViewController alloc]init];
-    v1.view.backgroundColor = [UIColor redColor];
+    // 1.首页
+    IWHomeViewController *home = [[IWHomeViewController alloc] init];
+    [self addChildViewController:home title:@"首页" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
     
-    [self addChildViewController:v1 title:@"123" imageName:@"tabbar_music" selectedImageName:@"tabbar_music_selected"];
+    // 2.消息
+    IWMessageViewController *msg = [[IWMessageViewController alloc] init];
+    [self addChildViewController:msg title:@"消息"imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+
     
-    UIViewController *v2 = [[UIViewController alloc]init];
-    v2.view.backgroundColor = [UIColor blueColor];
-    [self addChildViewController:v2 title:@"89" imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected"];
+    // 3.广场
+    IWSqaureViewController *square = [[IWSqaureViewController alloc] init];
+    
+    [self addChildViewController:square title:@"广场"imageName:@"tabbar_discover"selectedImageName:@"tabbar_discover_selected"];
+    
+    // 4.我
+    IWMeViewController *me = [[IWMeViewController alloc] init];
+    [self addChildViewController:me title:@"我"imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected"];
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName

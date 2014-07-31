@@ -16,7 +16,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发私信" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 #pragma mark - Table view data source
@@ -35,6 +37,13 @@
     return cell;
 }
 
-
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor yellowColor];
+    vc.title = @"测试控制器";
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
