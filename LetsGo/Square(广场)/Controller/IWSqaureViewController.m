@@ -7,8 +7,9 @@
 //
 
 #import "IWSqaureViewController.h"
+#import "LGSearch.h"
 
-@interface IWSqaureViewController ()
+@interface IWSqaureViewController ()<UITextFieldDelegate>
 
 @end
 
@@ -27,6 +28,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+     self.view.backgroundColor = LGglobalColor;
+    
+    LGSearch *search = [[LGSearch alloc]initWithFrame:CGRectMake(0, 0, 300, 30)];
+    search.delegate = self;
+    
+    self.navigationItem.titleView = search;
+    
+    
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +44,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view.window endEditing:YES];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return YES;
+}
+
 
 @end

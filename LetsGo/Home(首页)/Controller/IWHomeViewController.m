@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    self.view.backgroundColor = LGglobalColor;
     
     // 1.导航条的按钮
 //    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_friendsearch" higlightedImage:@"navigationbar_friendsearch_highlighted" target:self action:@selector(addFriends)];

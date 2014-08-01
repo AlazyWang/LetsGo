@@ -14,9 +14,10 @@
 #import "IWMessageViewController.h"
 #import "IWSqaureViewController.h"
 #import "IWMeViewController.h"
+#import "LGTabBar.h"
 
 @interface LGTabBarController ()
-
+@property (nonatomic,strong)LGTabBar *custonTabBar;
 @end
 
 @implementation LGTabBarController
@@ -26,8 +27,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self addTabbar];
 	// Do any additional setup after loading the view.
     [self addChildAllViewController];
+
+    
+}
+
+- (void)addTabbar
+{
+    LGTabBar *tabBar = [[LGTabBar alloc]initWithFrame:self.tabBar.bounds];
+    
+    _custonTabBar = tabBar;
+    [self.tabBar addSubview:tabBar];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    for (UIView * objc in self.tabBar.subviews) {
+        if ([objc isKindOfClass:[UIControl class]]) {
+            [objc removeFromSuperview];
+        }
+//         LGLog(@"--%@--%@",[objc class],objc.superclass);
+    }
+  
 }
 
 - (void)addChildAllViewController
@@ -68,6 +94,8 @@
     
     LGNavgationController *nav = [[LGNavgationController alloc]initWithRootViewController:childController];
     [self addChildViewController:nav];
+    
+
     
 }
 

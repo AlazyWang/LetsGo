@@ -15,4 +15,26 @@
     #import <Foundation/Foundation.h>
 #import "UIImage+LG.h"
 #define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+
+#define LGColor(r,g,b) [UIColor colorWithRed:(r)/225.0 green:(g)/225.0 blue:(b)/225.0 alpha:1]
+
+#define LGglobalColor LGColor(226,226,226)
+
+
+// 4.自定义Log
+#ifdef DEBUG
+#define LGLog(...) NSLog(__VA_ARGS__)
+#else
+#define LGLog(...)
+#endif
+
+
+
+
+
+
+
+
+
+
 #endif

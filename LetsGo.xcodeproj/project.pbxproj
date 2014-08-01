@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10E7A07198B325E002DEC69 /* LGSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E7A06198B325E002DEC69 /* LGSearch.m */; };
+		E10E7A0A198B394B002DEC69 /* LGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E7A09198B394B002DEC69 /* LGTabBar.m */; };
+		E10E7A0D198B3A70002DEC69 /* LGTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E7A0C198B3A70002DEC69 /* LGTabBarButton.m */; };
 		E1CA50291989E78600A8E050 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CA50261989E78600A8E050 /* Default-568h@2x.png */; };
 		E1CA502A1989E78600A8E050 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CA50271989E78600A8E050 /* Default.png */; };
 		E1CA502B1989E78600A8E050 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CA50281989E78600A8E050 /* Default@2x.png */; };
@@ -43,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E10E7A05198B325E002DEC69 /* LGSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSearch.h; sourceTree = "<group>"; };
+		E10E7A06198B325E002DEC69 /* LGSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSearch.m; sourceTree = "<group>"; };
+		E10E7A08198B394B002DEC69 /* LGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTabBar.h; sourceTree = "<group>"; };
+		E10E7A09198B394B002DEC69 /* LGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTabBar.m; sourceTree = "<group>"; };
+		E10E7A0B198B3A70002DEC69 /* LGTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTabBarButton.h; sourceTree = "<group>"; };
+		E10E7A0C198B3A70002DEC69 /* LGTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTabBarButton.m; sourceTree = "<group>"; };
 		E1CA50261989E78600A8E050 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E1CA50271989E78600A8E050 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E1CA50281989E78600A8E050 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -232,6 +241,8 @@
 		E1CA504E198A20B500A8E050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E10E7A05198B325E002DEC69 /* LGSearch.h */,
+				E10E7A06198B325E002DEC69 /* LGSearch.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +350,10 @@
 		E1FDFA4E196A8EE000B40A48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E10E7A08198B394B002DEC69 /* LGTabBar.h */,
+				E10E7A09198B394B002DEC69 /* LGTabBar.m */,
+				E10E7A0B198B3A70002DEC69 /* LGTabBarButton.h */,
+				E10E7A0C198B3A70002DEC69 /* LGTabBarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,9 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10E7A0A198B394B002DEC69 /* LGTabBar.m in Sources */,
 				E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */,
 				E1CA502E1989EDDB00A8E050 /* UIImage+LG.m in Sources */,
+				E10E7A0D198B3A70002DEC69 /* LGTabBarButton.m in Sources */,
 				E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */,
+				E10E7A07198B325E002DEC69 /* LGSearch.m in Sources */,
 				E1FDFA5B196A905000B40A48 /* LGNavgationController.m in Sources */,
 				E1FDFA29196A85A300B40A48 /* main.m in Sources */,
 				E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */,
