@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LGTabBar;
+@protocol LGtabBarDelegate <NSObject>
+
+- (void)tabBar:(LGTabBar *)tabBar didSelectItemFrom:(int)didSelectItemFrom didSelectItemTo:(int)didSelectItemTo;
+
+@end
 
 @interface LGTabBar : UIView
 
+@property (nonatomic,weak) id<LGtabBarDelegate> delegate;
+
+- (void)addTabBarButtonWithItem:(UITabBarItem*)item;
 @end

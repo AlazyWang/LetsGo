@@ -8,6 +8,8 @@
 
 #import "LGAppDelegate.h"
 #import "LGTabBarController.h"
+#import "LGAuthWebViewController.h"
+#import "LGAccount.h"
 
 @implementation LGAppDelegate
 
@@ -19,9 +21,18 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    LGTabBarController *barController = [[LGTabBarController alloc]init];
+    UIViewController *controller = nil;
+    
+    if ([LGAccount currentAccount]) {
+        NSLog(@"%@",[NSKeyedUnarchiver unarchiveObjectWithFile:Kpath ]);
+        controller = [[LGTabBarController alloc]init];
+    } else
+    {
+        controller = [[LGAuthWebViewController alloc]init];
+    }
 
-    [self.window setRootViewController:barController];
+
+    [self.window setRootViewController:controller];
     
     [self.window makeKeyAndVisible];
     return YES;

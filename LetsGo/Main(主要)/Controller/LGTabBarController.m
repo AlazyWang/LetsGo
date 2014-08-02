@@ -16,7 +16,7 @@
 #import "IWMeViewController.h"
 #import "LGTabBar.h"
 
-@interface LGTabBarController ()
+@interface LGTabBarController ()<LGtabBarDelegate>
 @property (nonatomic,strong)LGTabBar *custonTabBar;
 @end
 
@@ -37,15 +37,15 @@
 - (void)addTabbar
 {
     LGTabBar *tabBar = [[LGTabBar alloc]initWithFrame:self.tabBar.bounds];
-    
+    tabBar.delegate = self;
     _custonTabBar = tabBar;
     [self.tabBar addSubview:tabBar];
     
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:YES];
+    [super viewWillAppear:YES];
     
     for (UIView * objc in self.tabBar.subviews) {
         if ([objc isKindOfClass:[UIControl class]]) {
@@ -54,6 +54,11 @@
 //         LGLog(@"--%@--%@",[objc class],objc.superclass);
     }
   
+}
+
+- (void)tabBar:(LGTabBar *)tabBar didSelectItemFrom:(int)didSelectItemFrom didSelectItemTo:(int)didSelectItemTo
+{
+    self.selectedIndex = didSelectItemTo;
 }
 
 - (void)addChildAllViewController
@@ -84,7 +89,7 @@
     childController.tabBarItem.title = title;
     
     childController.tabBarItem.image = [UIImage imageWithNamed:imageName];
-    
+    childController.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",arc4random_uniform(100)];
     
     if (iOS7) {
         childController.tabBarItem.selectedImage = [[UIImage imageWithNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -94,6 +99,7 @@
     
     LGNavgationController *nav = [[LGNavgationController alloc]initWithRootViewController:childController];
     [self addChildViewController:nav];
+    [_custonTabBar addTabBarButtonWithItem:childController.tabBarItem];
     
 
     

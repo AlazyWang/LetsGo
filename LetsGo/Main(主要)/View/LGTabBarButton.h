@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LGTabBarButton : UIButton
-
+@property (strong,nonatomic)UITabBarItem *item;
 @end

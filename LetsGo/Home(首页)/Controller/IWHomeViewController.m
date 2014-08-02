@@ -66,9 +66,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *v1 = [[UIViewController alloc]init];
-    v1.view.backgroundColor = [UIColor grayColor];
-    [self.navigationController pushViewController:v1 animated:YES];
+//    UIViewController *v1 = [[UIViewController alloc]init];
+//    v1.view.backgroundColor = [UIColor grayColor];
+//    [self.navigationController pushViewController:v1 animated:YES];
+    self.tabBarItem.badgeValue = @"90";
 }
 
 
