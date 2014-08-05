@@ -8,9 +8,18 @@
 
 #import "IWHomeViewController.h"
 #import "UIBarButtonItem+LG.h"
+#import "LGHttpTool.h"
+#import "LGStatusTool.h"
+#import "LGAccount.h"
+#import "LGUser.h"
+#import "LGUserTool.h"
+#import "LGFriendStatusesResult.h"
+#import "LGFriendStatusesParam.h"
+#import "LGUserInfoParam.h"
+#import "LGUserTool.h"
 
 @interface IWHomeViewController ()
-
+@property (nonatomic,strong)NSArray *arrayOfStatues;
 @end
 
 @implementation IWHomeViewController
@@ -18,8 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.arrayOfStatues = [NSArray array];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     self.view.backgroundColor = LGglobalColor;
     
     // 1.导航条的按钮
@@ -30,6 +39,32 @@
 //    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_pop" higlightedImage:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_friendsearch"  selectedImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(addFriends)];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_pop" selectedImageName:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
+//    [LGStatusTool statusesWithAccessToken:[LGAccount currentAccount].access_token success:^(NSArray *status) {
+//        self.arrayOfStatues = status;
+//        [self.tableView reloadData];
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
+    LGFriendStatusesParam *result = [[LGFriendStatusesParam alloc]init];
+    result.access_token = [LGAccount currentAccount].access_token;
+    [LGStatusTool statusesWithAccessParam:result success:^(LGFriendStatusesResult *result) {
+        self.arrayOfStatues = result.statuses;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    
+    LGUserInfoParam *param = [[LGUserInfoParam alloc]init];
+    param.uid = [LGAccount currentAccount].uid;
+    param.access_token = [LGAccount currentAccount].access_token;
+    [LGUserTool userInfoParam:param success:^(LGUser *user) {
+        self.title = user.name;
+        self.tabBarItem.title = @"首页";
+    } failure:nil];
+    
+     
 }
 /**
  *  添加朋友
@@ -51,18 +86,25 @@
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return _arrayOfStatues.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    LGStatus *status = (LGStatus *)_arrayOfStatues[indexPath.row];
+    cell.textLabel.text = status.text;
+ 
     
-    cell.textLabel.text = @"测试数据";
+    cell.detailTextLabel.text = status.user.desc;
     
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

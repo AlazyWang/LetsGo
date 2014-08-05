@@ -11,6 +11,7 @@
 #import "LGAccount.h"
 #import "LGTabBarController.h"
 #import "LGHttpTool.h"
+#import "MBProgressHUD+Add.h"
 
 @interface LGAuthWebViewController () <UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView* webView;
@@ -70,6 +71,17 @@
     return YES;
 }
 
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [MBProgressHUD showMessage:@"正在加载中" toView:_webView];
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [MBProgressHUD hideHUDForView:_webView animated:YES];
+}
 
 @end
 

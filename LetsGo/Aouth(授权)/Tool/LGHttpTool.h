@@ -15,5 +15,5 @@ typedef void(^HttpFailure)(NSError* error);
 @interface LGHttpTool : NSObject
 
 + (void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(HttpSuccess)success failure:(HttpFailure)failure;
-
++ (void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(HttpSuccess)success failure:(HttpFailure)failure;
 @end

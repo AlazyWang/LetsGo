@@ -17,18 +17,26 @@ static LGAccount *_currentAccount;
 {
     self = [super init];
     if (self) {
-        [aDecoder decodeObjectForKey:@"access_token"];
-        [aDecoder decodeObjectForKey:@"exprires_in"];
-        [aDecoder decodeObjectForKey:@"uid"];
-        
-        
+       self.access_token = [aDecoder decodeObjectForKey:@"access_token"];
+       self.expires_in = [aDecoder decodeObjectForKey:@"exprires_in"];
+       self.uid = [aDecoder decodeObjectForKey:@"uid"];
+
     }
     
     return self;
 }
 
-+ (void )savaAccount:(LGAccount *)account
+//归档
+-(void)encodeWithCoder:(NSCoder *)aCoder
 {
+    [aCoder encodeObject:self.access_token forKey:@"access_token"];
+    [aCoder encodeObject:self.expires_in forKey:@"expires_in"];
+    [aCoder encodeObject:self.uid forKey:@"uid"];
+}
+
++ (void)savaAccount:(LGAccount *)account
+{
+    _currentAccount = account;
     [NSKeyedArchiver archiveRootObject:account toFile:Kpath];
 }
 
@@ -40,18 +48,12 @@ static LGAccount *_currentAccount;
     return _currentAccount;
 }
 
-//归档
--(void)encodeWithCoder:(NSCoder *)aCoder
-{
-    [aCoder encodeObject:self.access_token forKey:@"access_token"];
-    [aCoder encodeObject:self.expires_in forKey:@"exprires_in"];
-    [aCoder encodeObject:self.uid forKey:@"uid"];
-}
+
 
 
 +(void)getAccessToken:(NSString *)code success:(AccessTokenSuccess)success failure:(HttpFailure)failure
 {
-
+    
     NSMutableDictionary* dicM = [NSMutableDictionary dictionary];
     
     dicM[@"client_id"] = @"407425450";
@@ -65,23 +67,19 @@ static LGAccount *_currentAccount;
     [LGHttpTool postWithURL:@"https://api.weibo.com/oauth2/access_token" params:dicM success:^(id json) {
         
         LGAccount *account = [[LGAccount alloc]init];
-
         account.uid = json[@"uid"];
-        account.expires_in = json[@"exprires_in"];
-        account.access_token = json[@"exprires_in"];
+        account.expires_in = json[@"expires_in"];
+        account.access_token = json[@"access_token"];
 
         [LGAccount savaAccount:account];
         if (success) {
             success();
         }
 
-        
     } failure:^(NSError *error) {
         NSLog(@"--%@---",error);
     }];
-    
-    
-    
+
  
 }
 @end

@@ -38,6 +38,15 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_item removeObserver:self forKeyPath:@"title"];
+    [_item removeObserver:self forKeyPath:@"image"];
+    [_item removeObserver:self forKeyPath:@"selectedImage"];
+    [_item removeObserver:self forKeyPath:@"badgeValue"];
+    
+
+}
 - (void)setItem:(UITabBarItem *)item
 {
     _item = item;
