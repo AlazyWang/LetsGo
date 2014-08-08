@@ -5,6 +5,12 @@
 //  Created by robert on 14-8-2.
 //  Copyright (c) 2014年 robert. All rights reserved.
 //
+typedef enum {
+    IWMBTypeNone = 0, // 没有
+    IWMBTypeNormal, // 普通
+    IWMBTypeYear // 年费
+} IWMBType;
+
 
 #import <Foundation/Foundation.h>
 
@@ -33,4 +39,7 @@
 @property (nonatomic, assign) int friends_count;
 /**	int	微博数 */
 @property (nonatomic, assign) int statuses_count;
+
+@property (nonatomic, assign) IWMBType mbtype;
+
 @end

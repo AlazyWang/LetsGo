@@ -33,9 +33,51 @@
 
 
 
+/*
+ 6.一条微博上的颜色
+ */
+// 昵称
+#define IWNameColor LGColor(88, 88, 88)
+// 会员昵称颜色
+#define IWMBNameColor LGColor(244, 103, 8)
+// 时间
+#define IWTimeColor LGColor(246, 157, 46)
+// 内容
+#define IWContentColor LGColor(52, 52, 52)
+// 来源
+#define IWSourceColor LGColor(153, 153, 153)
+// 被转发昵称
+#define IWRetweetNameColor LGColor(81, 126, 175)
+// 被转发内容
+#define IWRetweetContentColor LGColor(109, 109, 109)
 
+/*
+ 7.一条微博上的字体
+ */
+// 昵称
+#define IWNameFont [UIFont systemFontOfSize:15]
+// 时间
+#define IWTimeFont [UIFont systemFontOfSize:12]
+// 来源
+#define IWSourceFont IWTimeFont
+// 内容
+#define IWContentFont IWNameFont
+// 转发的昵称
+#define IWRetweetNameFont [UIFont systemFontOfSize:15]
+// 转发的内容
+#define IWRetweetContentFont IWRetweetNameFont
 
+/*
+8.常用的一些距离
+*/
+// cell的边框宽度（cell的内边距）
+#define IWCellBorderWidth 8
+// tableview的边框宽度（tableView的内边距）
+#define IWTableBorderWidth 8
+// 每个cell之间的间距
+#define IWCellMargin 5
 
+#define LGdockHight 35
 
 
 

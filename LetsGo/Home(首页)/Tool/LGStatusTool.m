@@ -48,6 +48,7 @@
             LGFriendStatusesResult *result = [[LGFriendStatusesResult alloc]init];
             [result setKeyValues:json];
             success(result);
+            NSLog(@"--%@--",json);
         }
     } failure:^(NSError *error) {
         

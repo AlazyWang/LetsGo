@@ -19,9 +19,11 @@
 #import "LGUserTool.h"
 #import "MJRefresh.h"
 #import "UIImage+LG.h"
+#import "LGStatusCell.h"
+#import "LGStatusFrame.h"
 
 @interface IWHomeViewController () <MJRefreshBaseViewDelegate>
-@property (nonatomic,strong)NSMutableArray *arrayOfStatues;
+@property (nonatomic,strong)NSMutableArray *arrayOfStatuesFrame;
 
 @property (nonatomic,strong)MJRefreshHeaderView *header;
 @property (nonatomic,strong)MJRefreshFooterView *footer;
@@ -33,9 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.arrayOfStatues = [NSMutableArray array];
+    self.arrayOfStatuesFrame = [NSMutableArray array];
     
     self.view.backgroundColor = LGglobalColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(IWCellMargin, 0, IWCellMargin,0);
     
     [self setupRefrsh];
     
@@ -109,16 +113,23 @@
 {
     
     LGFriendStatusesParam *param = [[LGFriendStatusesParam alloc]init];
-       if (_arrayOfStatues.count >0) {
-        LGStatus *firstStatu = [_arrayOfStatues lastObject];
+       if (_arrayOfStatuesFrame.count >0) {
+        LGStatusFrame *firstStatu = [_arrayOfStatuesFrame lastObject];
         
-        long long sinceId = [firstStatu.idstr longLongValue] -1;
+        long long sinceId = [firstStatu.status.idstr longLongValue] -1;
         param.max_id = @(sinceId);
        }
     param.access_token = [LGAccount currentAccount].access_token;
     
     [LGStatusTool statusesWithAccessParam:param success:^(LGFriendStatusesResult *result) {
-        [_arrayOfStatues addObjectsFromArray:result.statuses];
+        
+     
+        for (LGStatus *status in result.statuses) {
+            LGStatusFrame *statusFrame = [[LGStatusFrame alloc]init];
+            statusFrame.status = status;
+            [_arrayOfStatuesFrame addObject:statusFrame];
+        }
+      
         [self.tableView reloadData];
         [_footer endRefreshing];
         
@@ -133,10 +144,10 @@
 {
     
     LGFriendStatusesParam *param = [[LGFriendStatusesParam alloc]init];
-    if (_arrayOfStatues.count >0) {
-        LGStatus *firstStatu = _arrayOfStatues[0];
+    if (_arrayOfStatuesFrame.count >0) {
+        LGStatusFrame *firstStatuFrame = _arrayOfStatuesFrame[0];
         
-        long long sinceId = [firstStatu.idstr longLongValue];
+        long long sinceId = [firstStatuFrame.status.idstr longLongValue];
         param.since_id = @(sinceId);
     }
     param.access_token = [LGAccount currentAccount].access_token;
@@ -144,11 +155,17 @@
     [LGStatusTool statusesWithAccessParam:param success:^(LGFriendStatusesResult *result) {
         NSMutableArray *newStatuses = [NSMutableArray array];
         
-        [newStatuses addObjectsFromArray:result.statuses];
+        for (LGStatus *status in result.statuses) {
+            LGStatusFrame *statusFrame = [[LGStatusFrame alloc]init];
+            statusFrame.status = status;
+            [newStatuses addObject:statusFrame];
+        }
         
-        [newStatuses addObjectsFromArray:_arrayOfStatues];
+
         
-        _arrayOfStatues = newStatuses;
+        [newStatuses addObjectsFromArray:_arrayOfStatuesFrame];
+        
+        _arrayOfStatuesFrame = newStatuses;
         [self.tableView reloadData];
         [_header endRefreshing];
         
@@ -213,21 +230,15 @@
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _arrayOfStatues.count;
+    return _arrayOfStatuesFrame.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    LGStatus *status = (LGStatus *)_arrayOfStatues[indexPath.row];
-    cell.textLabel.text = status.text;
- 
+
     
-    cell.detailTextLabel.text = status.user.desc;
+    LGStatusCell *cell = [LGStatusCell cellWithTableView:tableView];
+    cell.statusFrame = _arrayOfStatuesFrame[indexPath.row];
     
     return cell;
 }
@@ -239,6 +250,12 @@
 //    v1.view.backgroundColor = [UIColor grayColor];
 //    [self.navigationController pushViewController:v1 animated:YES];
     self.tabBarItem.badgeValue = @"90";
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [_arrayOfStatuesFrame[indexPath.row] cellHeight];
 }
 
 

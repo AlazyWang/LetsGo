@@ -15,6 +15,8 @@
 		E1227593198CCA7100AA1F23 /* LGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1227592198CCA7100AA1F23 /* LGUser.m */; };
 		E1227596198CCA8000AA1F23 /* LGStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E1227595198CCA8000AA1F23 /* LGStatus.m */; };
 		E122759A198CCB6900AA1F23 /* LGStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1227599198CCB6900AA1F23 /* LGStatusTool.m */; };
+		E1588ECB1994654B00EF0453 /* LGPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1588ECA1994654B00EF0453 /* LGPhotoView.m */; };
+		E1588ECE199469FA00EF0453 /* LGStatusDock.m in Sources */ = {isa = PBXBuildFile; fileRef = E1588ECD199469FA00EF0453 /* LGStatusDock.m */; };
 		E1B2F316198C7F2B00A36F4D /* LGAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F315198C7F2B00A36F4D /* LGAuthWebViewController.m */; };
 		E1B2F332198C8A2200A36F4D /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F31A198C8A2200A36F4D /* AFHTTPClient.m */; };
 		E1B2F333198C8A2200A36F4D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F31C198C8A2200A36F4D /* AFHTTPRequestOperation.m */; };
@@ -37,6 +39,10 @@
 		E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA503B198A20B500A8E050 /* IWMeViewController.m */; };
 		E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5041198A20B500A8E050 /* IWMessageViewController.m */; };
 		E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */; };
+		E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D5237B19932B1E002957AA /* LGPhoto.m */; };
+		E1D5237F19932B68002957AA /* LGPhotoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D5237E19932B68002957AA /* LGPhotoListView.m */; };
+		E1DA52E81991BD490019E5D1 /* LGStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA52E71991BD490019E5D1 /* LGStatusCell.m */; };
+		E1DA52EB1991CCBE0019E5D1 /* LGStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */; };
 		E1F08ECC19906D8000792401 /* LGFriendStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ECB19906D8000792401 /* LGFriendStatusesResult.m */; };
 		E1F08F081990708D00792401 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ECF1990708D00792401 /* MJArgument.m */; };
 		E1F08F091990708D00792401 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ED21990708D00792401 /* MJIvar.m */; };
@@ -111,6 +117,10 @@
 		E1227595198CCA8000AA1F23 /* LGStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatus.m; sourceTree = "<group>"; };
 		E1227598198CCB6900AA1F23 /* LGStatusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusTool.h; sourceTree = "<group>"; };
 		E1227599198CCB6900AA1F23 /* LGStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusTool.m; sourceTree = "<group>"; };
+		E1588EC91994654B00EF0453 /* LGPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPhotoView.h; sourceTree = "<group>"; };
+		E1588ECA1994654B00EF0453 /* LGPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPhotoView.m; sourceTree = "<group>"; };
+		E1588ECC199469FA00EF0453 /* LGStatusDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusDock.h; sourceTree = "<group>"; };
+		E1588ECD199469FA00EF0453 /* LGStatusDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusDock.m; sourceTree = "<group>"; };
 		E1B2F314198C7F2B00A36F4D /* LGAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAuthWebViewController.h; sourceTree = "<group>"; };
 		E1B2F315198C7F2B00A36F4D /* LGAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAuthWebViewController.m; sourceTree = "<group>"; };
 		E1B2F319198C8A2200A36F4D /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -152,6 +162,14 @@
 		E1CA5041198A20B500A8E050 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
 		E1CA504B198A20B500A8E050 /* IWSqaureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSqaureViewController.h; sourceTree = "<group>"; };
 		E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSqaureViewController.m; sourceTree = "<group>"; };
+		E1D5237A19932B1E002957AA /* LGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPhoto.h; sourceTree = "<group>"; };
+		E1D5237B19932B1E002957AA /* LGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPhoto.m; sourceTree = "<group>"; };
+		E1D5237D19932B68002957AA /* LGPhotoListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPhotoListView.h; sourceTree = "<group>"; };
+		E1D5237E19932B68002957AA /* LGPhotoListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPhotoListView.m; sourceTree = "<group>"; };
+		E1DA52E61991BD490019E5D1 /* LGStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusCell.h; sourceTree = "<group>"; };
+		E1DA52E71991BD490019E5D1 /* LGStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusCell.m; sourceTree = "<group>"; };
+		E1DA52E91991CCBE0019E5D1 /* LGStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusFrame.h; sourceTree = "<group>"; };
+		E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusFrame.m; sourceTree = "<group>"; };
 		E1F08ECA19906D8000792401 /* LGFriendStatusesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFriendStatusesResult.h; sourceTree = "<group>"; };
 		E1F08ECB19906D8000792401 /* LGFriendStatusesResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFriendStatusesResult.m; sourceTree = "<group>"; };
 		E1F08ECE1990708D00792401 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
@@ -401,6 +419,10 @@
 				E1F08ECB19906D8000792401 /* LGFriendStatusesResult.m */,
 				E1F08F231990742E00792401 /* LGFriendStatusesParam.h */,
 				E1F08F241990742E00792401 /* LGFriendStatusesParam.m */,
+				E1DA52E91991CCBE0019E5D1 /* LGStatusFrame.h */,
+				E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */,
+				E1D5237A19932B1E002957AA /* LGPhoto.h */,
+				E1D5237B19932B1E002957AA /* LGPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +430,14 @@
 		E1CA5037198A20B500A8E050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1588ECC199469FA00EF0453 /* LGStatusDock.h */,
+				E1588ECD199469FA00EF0453 /* LGStatusDock.m */,
+				E1588EC91994654B00EF0453 /* LGPhotoView.h */,
+				E1588ECA1994654B00EF0453 /* LGPhotoView.m */,
+				E1DA52E61991BD490019E5D1 /* LGStatusCell.h */,
+				E1DA52E71991BD490019E5D1 /* LGStatusCell.m */,
+				E1D5237D19932B68002957AA /* LGPhotoListView.h */,
+				E1D5237E19932B68002957AA /* LGPhotoListView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -822,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D5237F19932B68002957AA /* LGPhotoListView.m in Sources */,
 				E1F08F1F1990708D00792401 /* UIImage+GIF.m in Sources */,
 				E122758D198C920F00AA1F23 /* LGAccount.m in Sources */,
 				E1F08F081990708D00792401 /* MJArgument.m in Sources */,
@@ -829,6 +860,7 @@
 				E1F08F1C1990708D00792401 /* SDWebImageManager.m in Sources */,
 				E1F08F0A1990708D00792401 /* MJMember.m in Sources */,
 				E1F08F0B1990708D00792401 /* MJMethod.m in Sources */,
+				E1588ECB1994654B00EF0453 /* LGPhotoView.m in Sources */,
 				E1B2F316198C7F2B00A36F4D /* LGAuthWebViewController.m in Sources */,
 				E1F08F121990708D00792401 /* MJRefreshBaseView.m in Sources */,
 				E10E7A0A198B394B002DEC69 /* LGTabBar.m in Sources */,
@@ -843,6 +875,7 @@
 				E1B2F333198C8A2200A36F4D /* AFHTTPRequestOperation.m in Sources */,
 				E1B2F33B198C8A2200A36F4D /* MBProgressHUD+Add.m in Sources */,
 				E1F08F091990708D00792401 /* MJIvar.m in Sources */,
+				E1DA52E81991BD490019E5D1 /* LGStatusCell.m in Sources */,
 				E1B2F334198C8A2200A36F4D /* AFImageRequestOperation.m in Sources */,
 				E1B2F338198C8A2200A36F4D /* AFURLConnectionOperation.m in Sources */,
 				E10E7A0D198B3A70002DEC69 /* LGTabBarButton.m in Sources */,
@@ -864,6 +897,7 @@
 				E122759A198CCB6900AA1F23 /* LGStatusTool.m in Sources */,
 				E1F08F0D1990708D00792401 /* MJTypeEncoding.m in Sources */,
 				E1F08F0F1990708D00792401 /* NSObject+MJKeyValue.m in Sources */,
+				E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */,
 				E1F08F28199076B300792401 /* LGUserTool.m in Sources */,
 				E1B2F339198C8A2200A36F4D /* AFXMLRequestOperation.m in Sources */,
 				E1F08F0C1990708D00792401 /* MJType.m in Sources */,
@@ -877,11 +911,13 @@
 				E1F08F161990708D00792401 /* NSData+GIF.m in Sources */,
 				E1F08F131990708D00792401 /* MJRefreshConst.m in Sources */,
 				E1FDFA2D196A85A300B40A48 /* LGAppDelegate.m in Sources */,
+				E1DA52EB1991CCBE0019E5D1 /* LGStatusFrame.m in Sources */,
 				E1F08F1B1990708D00792401 /* SDWebImageDownloaderOperation.m in Sources */,
 				E1B2F337198C8A2200A36F4D /* AFPropertyListRequestOperation.m in Sources */,
 				E1F08F1A1990708D00792401 /* SDWebImageDownloader.m in Sources */,
 				E1CA5031198A19E600A8E050 /* UIBarButtonItem+LG.m in Sources */,
 				E1F08F2B1990770E00792401 /* LGUserInfoParam.m in Sources */,
+				E1588ECE199469FA00EF0453 /* LGStatusDock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,4 +11,7 @@
 @interface UIImage (LG)
 + (UIImage *)imageWithNamed:(NSString *)name;
 + (UIImage *)resizeWithName:(NSString *)name;
+
++ (UIImage *)resizeWithName:(NSString *)name width:(CGFloat)width hight:(CGFloat)hight;
+
 @end
