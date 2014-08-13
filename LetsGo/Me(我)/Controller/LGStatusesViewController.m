@@ -36,6 +36,7 @@
 @property (nonatomic,strong)LGUserStatusesResult *result;
 
 @property (nonatomic,strong)LGUserStatusesParam *param;
+
 @end
 
 @implementation LGStatusesViewController

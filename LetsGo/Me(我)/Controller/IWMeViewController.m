@@ -44,6 +44,11 @@
  
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)loadDate
 {
     // 加载数据

@@ -7,6 +7,7 @@
 //
 
 #import "LGNavgationController.h"
+#import "UIBarButtonItem+LG.h"
 
 
 
@@ -70,9 +71,25 @@
    
     if (self.viewControllers.count >0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_back" selectedImageName:@"navigationbar_back_highlighted" target:self action:@selector(back)];
+        
+        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_more" selectedImageName:@"navigationbar_more_highlighted" target:self action:@selector(more)];
+        
+        
     }
     [super pushViewController:viewController animated:YES];
    
+}
+
+- (void)back
+{
+    [self popViewControllerAnimated:YES];
+}
+
+- (void)more
+{
+    [self popToRootViewControllerAnimated:YES];
 }
 
 

@@ -98,6 +98,7 @@
 {
     [_footer free];
     [_header free];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
