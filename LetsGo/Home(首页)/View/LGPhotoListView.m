@@ -47,6 +47,14 @@
         if (i < picCount) {
             imageView.hidden = NO;
             
+            if (picCount == 1) {
+                imageView.contentMode = UIViewContentModeScaleAspectFit;
+                imageView.clipsToBounds = NO;
+            } else{
+                imageView.contentMode = UIViewContentModeScaleAspectFill;
+                imageView.clipsToBounds = YES;
+            }
+            
             int colTotalCount = pic_urls.count == 4?2:3;
             
             int col = i % colTotalCount;

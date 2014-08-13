@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 robert. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "LGBaseParam.h"
 
-@interface LGUserInfoParam : NSObject
-@property(nonatomic,strong)NSString *access_token;
+@interface LGUserInfoParam : LGBaseParam
+
 @property(nonatomic,strong)NSString *uid;
 @end

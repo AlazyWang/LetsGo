@@ -11,6 +11,14 @@ typedef enum {
     IWMBTypeYear // 年费
 } IWMBType;
 
+typedef enum {
+    IWVerifiedTypeNone = - 1,
+    IWVerifiedTypePersonal = 0,  // 个人认证
+    IWVerifiedTypeOrgEnterprice = 2, // 企业官方：CSDN、EOE、搜狐新闻客户端
+    IWVerifiedTypeOrgMedia = 3, // 媒体官方：程序员杂志、苹果汇
+    IWVerifiedTypeOrgWebsite = 5, // 网站官方：猫扑
+    IWVerifiedTypeDaren = 220 // 微博达人
+} IWVerifiedType;
 
 #import <Foundation/Foundation.h>
 
@@ -41,5 +49,12 @@ typedef enum {
 @property (nonatomic, assign) int statuses_count;
 
 @property (nonatomic, assign) IWMBType mbtype;
+
+/** boolean 	是否是微博认证用户，即加V用户，true：是，false：否*/
+@property (nonatomic, assign) BOOL verified;
+/** int 认证类型 */
+@property (nonatomic, assign) IWVerifiedType verified_type;
+/** string 	认证原因 */
+@property (nonatomic, copy) NSString *verified_reason;
 
 @end

@@ -17,6 +17,11 @@
 		E122759A198CCB6900AA1F23 /* LGStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1227599198CCB6900AA1F23 /* LGStatusTool.m */; };
 		E1588ECB1994654B00EF0453 /* LGPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1588ECA1994654B00EF0453 /* LGPhotoView.m */; };
 		E1588ECE199469FA00EF0453 /* LGStatusDock.m in Sources */ = {isa = PBXBuildFile; fileRef = E1588ECD199469FA00EF0453 /* LGStatusDock.m */; };
+		E1588ED119949B8600EF0453 /* LGIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1588ED019949B8600EF0453 /* LGIconView.m */; };
+		E19FE2C41999F7D8006EE50D /* LGBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FE2C31999F7D8006EE50D /* LGBaseParam.m */; };
+		E19FE2C71999F889006EE50D /* LGUnreadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FE2C61999F889006EE50D /* LGUnreadParam.m */; };
+		E19FE2CA1999F9C2006EE50D /* LGUnreadResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FE2C91999F9C2006EE50D /* LGUnreadResult.m */; };
+		E19FE2CD1999FA8F006EE50D /* LGRemindTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FE2CC1999FA8F006EE50D /* LGRemindTool.m */; };
 		E1B2F316198C7F2B00A36F4D /* LGAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F315198C7F2B00A36F4D /* LGAuthWebViewController.m */; };
 		E1B2F332198C8A2200A36F4D /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F31A198C8A2200A36F4D /* AFHTTPClient.m */; };
 		E1B2F333198C8A2200A36F4D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B2F31C198C8A2200A36F4D /* AFHTTPRequestOperation.m */; };
@@ -39,10 +44,21 @@
 		E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA503B198A20B500A8E050 /* IWMeViewController.m */; };
 		E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5041198A20B500A8E050 /* IWMessageViewController.m */; };
 		E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */; };
+		E1D0F923199757AB00057087 /* LGSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D0F922199757AB00057087 /* LGSendViewController.m */; };
+		E1D0F92619975FA100057087 /* LGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D0F92519975FA100057087 /* LGTextView.m */; };
 		E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D5237B19932B1E002957AA /* LGPhoto.m */; };
 		E1D5237F19932B68002957AA /* LGPhotoListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D5237E19932B68002957AA /* LGPhotoListView.m */; };
 		E1DA52E81991BD490019E5D1 /* LGStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA52E71991BD490019E5D1 /* LGStatusCell.m */; };
 		E1DA52EB1991CCBE0019E5D1 /* LGStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */; };
+		E1E8868F199AF949004C6BAB /* LGHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E8868E199AF949004C6BAB /* LGHeadView.xib */; };
+		E1E88692199AFC83004C6BAB /* LGHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E88691199AFC83004C6BAB /* LGHeadView.m */; };
+		E1E88695199B009E004C6BAB /* LGNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E88694199B009E004C6BAB /* LGNumber.m */; };
+		E1E88698199B15B7004C6BAB /* LGMoreBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E88697199B15B7004C6BAB /* LGMoreBtn.m */; };
+		E1E8869B199B163C004C6BAB /* LGBaseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E8869A199B163C004C6BAB /* LGBaseBtn.m */; };
+		E1E8869E199B37BF004C6BAB /* LGUserStatusesParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E8869D199B37BF004C6BAB /* LGUserStatusesParam.m */; };
+		E1E886A1199B388E004C6BAB /* LGUserStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E886A0199B388E004C6BAB /* LGUserStatusesResult.m */; };
+		E1E886A4199B4F02004C6BAB /* LGStatusesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E886A3199B4F02004C6BAB /* LGStatusesViewController.m */; };
+		E1E886A7199B5E43004C6BAB /* LGSendParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E886A6199B5E43004C6BAB /* LGSendParam.m */; };
 		E1F08ECC19906D8000792401 /* LGFriendStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ECB19906D8000792401 /* LGFriendStatusesResult.m */; };
 		E1F08F081990708D00792401 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ECF1990708D00792401 /* MJArgument.m */; };
 		E1F08F091990708D00792401 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F08ED21990708D00792401 /* MJIvar.m */; };
@@ -121,6 +137,16 @@
 		E1588ECA1994654B00EF0453 /* LGPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPhotoView.m; sourceTree = "<group>"; };
 		E1588ECC199469FA00EF0453 /* LGStatusDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusDock.h; sourceTree = "<group>"; };
 		E1588ECD199469FA00EF0453 /* LGStatusDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusDock.m; sourceTree = "<group>"; };
+		E1588ECF19949B8600EF0453 /* LGIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGIconView.h; sourceTree = "<group>"; };
+		E1588ED019949B8600EF0453 /* LGIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGIconView.m; sourceTree = "<group>"; };
+		E19FE2C21999F7D8006EE50D /* LGBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBaseParam.h; sourceTree = "<group>"; };
+		E19FE2C31999F7D8006EE50D /* LGBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGBaseParam.m; sourceTree = "<group>"; };
+		E19FE2C51999F888006EE50D /* LGUnreadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUnreadParam.h; sourceTree = "<group>"; };
+		E19FE2C61999F889006EE50D /* LGUnreadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUnreadParam.m; sourceTree = "<group>"; };
+		E19FE2C81999F9C2006EE50D /* LGUnreadResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUnreadResult.h; sourceTree = "<group>"; };
+		E19FE2C91999F9C2006EE50D /* LGUnreadResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUnreadResult.m; sourceTree = "<group>"; };
+		E19FE2CB1999FA8F006EE50D /* LGRemindTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRemindTool.h; sourceTree = "<group>"; };
+		E19FE2CC1999FA8F006EE50D /* LGRemindTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGRemindTool.m; sourceTree = "<group>"; };
 		E1B2F314198C7F2B00A36F4D /* LGAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAuthWebViewController.h; sourceTree = "<group>"; };
 		E1B2F315198C7F2B00A36F4D /* LGAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAuthWebViewController.m; sourceTree = "<group>"; };
 		E1B2F319198C8A2200A36F4D /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -162,6 +188,10 @@
 		E1CA5041198A20B500A8E050 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
 		E1CA504B198A20B500A8E050 /* IWSqaureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSqaureViewController.h; sourceTree = "<group>"; };
 		E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSqaureViewController.m; sourceTree = "<group>"; };
+		E1D0F921199757AB00057087 /* LGSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSendViewController.h; sourceTree = "<group>"; };
+		E1D0F922199757AB00057087 /* LGSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSendViewController.m; sourceTree = "<group>"; };
+		E1D0F92419975FA100057087 /* LGTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTextView.h; sourceTree = "<group>"; };
+		E1D0F92519975FA100057087 /* LGTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTextView.m; sourceTree = "<group>"; };
 		E1D5237A19932B1E002957AA /* LGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPhoto.h; sourceTree = "<group>"; };
 		E1D5237B19932B1E002957AA /* LGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPhoto.m; sourceTree = "<group>"; };
 		E1D5237D19932B68002957AA /* LGPhotoListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPhotoListView.h; sourceTree = "<group>"; };
@@ -170,6 +200,23 @@
 		E1DA52E71991BD490019E5D1 /* LGStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusCell.m; sourceTree = "<group>"; };
 		E1DA52E91991CCBE0019E5D1 /* LGStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusFrame.h; sourceTree = "<group>"; };
 		E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusFrame.m; sourceTree = "<group>"; };
+		E1E8868E199AF949004C6BAB /* LGHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LGHeadView.xib; sourceTree = "<group>"; };
+		E1E88690199AFC83004C6BAB /* LGHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGHeadView.h; sourceTree = "<group>"; };
+		E1E88691199AFC83004C6BAB /* LGHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGHeadView.m; sourceTree = "<group>"; };
+		E1E88693199B009E004C6BAB /* LGNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGNumber.h; sourceTree = "<group>"; };
+		E1E88694199B009E004C6BAB /* LGNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGNumber.m; sourceTree = "<group>"; };
+		E1E88696199B15B7004C6BAB /* LGMoreBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGMoreBtn.h; sourceTree = "<group>"; };
+		E1E88697199B15B7004C6BAB /* LGMoreBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGMoreBtn.m; sourceTree = "<group>"; };
+		E1E88699199B163C004C6BAB /* LGBaseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBaseBtn.h; sourceTree = "<group>"; };
+		E1E8869A199B163C004C6BAB /* LGBaseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGBaseBtn.m; sourceTree = "<group>"; };
+		E1E8869C199B37BF004C6BAB /* LGUserStatusesParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUserStatusesParam.h; sourceTree = "<group>"; };
+		E1E8869D199B37BF004C6BAB /* LGUserStatusesParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUserStatusesParam.m; sourceTree = "<group>"; };
+		E1E8869F199B388E004C6BAB /* LGUserStatusesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUserStatusesResult.h; sourceTree = "<group>"; };
+		E1E886A0199B388E004C6BAB /* LGUserStatusesResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUserStatusesResult.m; sourceTree = "<group>"; };
+		E1E886A2199B4F02004C6BAB /* LGStatusesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGStatusesViewController.h; sourceTree = "<group>"; };
+		E1E886A3199B4F02004C6BAB /* LGStatusesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGStatusesViewController.m; sourceTree = "<group>"; };
+		E1E886A5199B5E43004C6BAB /* LGSendParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSendParam.h; sourceTree = "<group>"; };
+		E1E886A6199B5E43004C6BAB /* LGSendParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSendParam.m; sourceTree = "<group>"; };
 		E1F08ECA19906D8000792401 /* LGFriendStatusesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFriendStatusesResult.h; sourceTree = "<group>"; };
 		E1F08ECB19906D8000792401 /* LGFriendStatusesResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFriendStatusesResult.m; sourceTree = "<group>"; };
 		E1F08ECE1990708D00792401 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
@@ -283,6 +330,8 @@
 		E1227597198CCB4A00AA1F23 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E19FE2CB1999FA8F006EE50D /* LGRemindTool.h */,
+				E19FE2CC1999FA8F006EE50D /* LGRemindTool.m */,
 				E1227598198CCB6900AA1F23 /* LGStatusTool.h */,
 				E1227599198CCB6900AA1F23 /* LGStatusTool.m */,
 				E1F08F26199076B300792401 /* LGUserTool.h */,
@@ -423,6 +472,12 @@
 				E1DA52EA1991CCBE0019E5D1 /* LGStatusFrame.m */,
 				E1D5237A19932B1E002957AA /* LGPhoto.h */,
 				E1D5237B19932B1E002957AA /* LGPhoto.m */,
+				E19FE2C21999F7D8006EE50D /* LGBaseParam.h */,
+				E19FE2C31999F7D8006EE50D /* LGBaseParam.m */,
+				E19FE2C51999F888006EE50D /* LGUnreadParam.h */,
+				E19FE2C61999F889006EE50D /* LGUnreadParam.m */,
+				E19FE2C81999F9C2006EE50D /* LGUnreadResult.h */,
+				E19FE2C91999F9C2006EE50D /* LGUnreadResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,6 +493,8 @@
 				E1DA52E71991BD490019E5D1 /* LGStatusCell.m */,
 				E1D5237D19932B68002957AA /* LGPhotoListView.h */,
 				E1D5237E19932B68002957AA /* LGPhotoListView.m */,
+				E1588ECF19949B8600EF0453 /* LGIconView.h */,
+				E1588ED019949B8600EF0453 /* LGIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +514,8 @@
 			children = (
 				E1CA503A198A20B500A8E050 /* IWMeViewController.h */,
 				E1CA503B198A20B500A8E050 /* IWMeViewController.m */,
+				E1E886A2199B4F02004C6BAB /* LGStatusesViewController.h */,
+				E1E886A3199B4F02004C6BAB /* LGStatusesViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -464,6 +523,10 @@
 		E1CA503C198A20B500A8E050 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1E8869C199B37BF004C6BAB /* LGUserStatusesParam.h */,
+				E1E8869D199B37BF004C6BAB /* LGUserStatusesParam.m */,
+				E1E8869F199B388E004C6BAB /* LGUserStatusesResult.h */,
+				E1E886A0199B388E004C6BAB /* LGUserStatusesResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +534,15 @@
 		E1CA503D198A20B500A8E050 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1E8868E199AF949004C6BAB /* LGHeadView.xib */,
+				E1E88690199AFC83004C6BAB /* LGHeadView.h */,
+				E1E88691199AFC83004C6BAB /* LGHeadView.m */,
+				E1E88693199B009E004C6BAB /* LGNumber.h */,
+				E1E88694199B009E004C6BAB /* LGNumber.m */,
+				E1E88696199B15B7004C6BAB /* LGMoreBtn.h */,
+				E1E88697199B15B7004C6BAB /* LGMoreBtn.m */,
+				E1E88699199B163C004C6BAB /* LGBaseBtn.h */,
+				E1E8869A199B163C004C6BAB /* LGBaseBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +611,43 @@
 			children = (
 				E10E7A05198B325E002DEC69 /* LGSearch.h */,
 				E10E7A06198B325E002DEC69 /* LGSearch.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1D0F91D1997575200057087 /* Send(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				E1D0F91E1997575200057087 /* Controller */,
+				E1D0F91F1997575200057087 /* Model */,
+				E1D0F9201997575200057087 /* View */,
+			);
+			path = "Send(发微博)";
+			sourceTree = "<group>";
+		};
+		E1D0F91E1997575200057087 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1D0F921199757AB00057087 /* LGSendViewController.h */,
+				E1D0F922199757AB00057087 /* LGSendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1D0F91F1997575200057087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1E886A5199B5E43004C6BAB /* LGSendParam.h */,
+				E1E886A6199B5E43004C6BAB /* LGSendParam.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1D0F9201997575200057087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1D0F92419975FA100057087 /* LGTextView.h */,
+				E1D0F92519975FA100057087 /* LGTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -653,6 +762,7 @@
 		E1FDFA22196A85A300B40A48 /* LetsGo */ = {
 			isa = PBXGroup;
 			children = (
+				E1D0F91D1997575200057087 /* Send(发微博) */,
 				E1B2F30F198C7EB700A36F4D /* Aouth(授权) */,
 				E1CA5032198A20B500A8E050 /* Home(首页) */,
 				E1CA5038198A20B500A8E050 /* Me(我) */,
@@ -834,6 +944,7 @@
 				E1CA50291989E78600A8E050 /* Default-568h@2x.png in Resources */,
 				E1CA502A1989E78600A8E050 /* Default.png in Resources */,
 				E1B2F33C198C8A2200A36F4D /* MBProgressHUD.bundle in Resources */,
+				E1E8868F199AF949004C6BAB /* LGHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,15 +964,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D5237F19932B68002957AA /* LGPhotoListView.m in Sources */,
+				E1E8869E199B37BF004C6BAB /* LGUserStatusesParam.m in Sources */,
 				E1F08F1F1990708D00792401 /* UIImage+GIF.m in Sources */,
+				E1E886A4199B4F02004C6BAB /* LGStatusesViewController.m in Sources */,
+				E1E886A7199B5E43004C6BAB /* LGSendParam.m in Sources */,
 				E122758D198C920F00AA1F23 /* LGAccount.m in Sources */,
+				E19FE2C41999F7D8006EE50D /* LGBaseParam.m in Sources */,
 				E1F08F081990708D00792401 /* MJArgument.m in Sources */,
 				E1F08F151990708D00792401 /* MJRefreshHeaderView.m in Sources */,
 				E1F08F1C1990708D00792401 /* SDWebImageManager.m in Sources */,
+				E1E88695199B009E004C6BAB /* LGNumber.m in Sources */,
+				E1E88698199B15B7004C6BAB /* LGMoreBtn.m in Sources */,
 				E1F08F0A1990708D00792401 /* MJMember.m in Sources */,
+				E19FE2CD1999FA8F006EE50D /* LGRemindTool.m in Sources */,
 				E1F08F0B1990708D00792401 /* MJMethod.m in Sources */,
 				E1588ECB1994654B00EF0453 /* LGPhotoView.m in Sources */,
+				E1E88692199AFC83004C6BAB /* LGHeadView.m in Sources */,
+				E1D0F92619975FA100057087 /* LGTextView.m in Sources */,
 				E1B2F316198C7F2B00A36F4D /* LGAuthWebViewController.m in Sources */,
+				E1E8869B199B163C004C6BAB /* LGBaseBtn.m in Sources */,
 				E1F08F121990708D00792401 /* MJRefreshBaseView.m in Sources */,
 				E10E7A0A198B394B002DEC69 /* LGTabBar.m in Sources */,
 				E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */,
@@ -869,12 +990,14 @@
 				E1227596198CCA8000AA1F23 /* LGStatus.m in Sources */,
 				E1F08F141990708D00792401 /* MJRefreshFooterView.m in Sources */,
 				E1CA502E1989EDDB00A8E050 /* UIImage+LG.m in Sources */,
+				E1D0F923199757AB00057087 /* LGSendViewController.m in Sources */,
 				E1227593198CCA7100AA1F23 /* LGUser.m in Sources */,
 				E1B2F336198C8A2200A36F4D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				E1B2F33A198C8A2200A36F4D /* UIImageView+AFNetworking.m in Sources */,
 				E1B2F333198C8A2200A36F4D /* AFHTTPRequestOperation.m in Sources */,
 				E1B2F33B198C8A2200A36F4D /* MBProgressHUD+Add.m in Sources */,
 				E1F08F091990708D00792401 /* MJIvar.m in Sources */,
+				E1E886A1199B388E004C6BAB /* LGUserStatusesResult.m in Sources */,
 				E1DA52E81991BD490019E5D1 /* LGStatusCell.m in Sources */,
 				E1B2F334198C8A2200A36F4D /* AFImageRequestOperation.m in Sources */,
 				E1B2F338198C8A2200A36F4D /* AFURLConnectionOperation.m in Sources */,
@@ -885,6 +1008,7 @@
 				E10E7A07198B325E002DEC69 /* LGSearch.m in Sources */,
 				E1FDFA5B196A905000B40A48 /* LGNavgationController.m in Sources */,
 				E1F08F221990708D00792401 /* UIImageView+WebCache.m in Sources */,
+				E19FE2CA1999F9C2006EE50D /* LGUnreadResult.m in Sources */,
 				E1F08F171990708D00792401 /* SDImageCache.m in Sources */,
 				E1F08F181990708D00792401 /* SDWebImageCompat.m in Sources */,
 				E1FDFA29196A85A300B40A48 /* main.m in Sources */,
@@ -899,6 +1023,8 @@
 				E1F08F0F1990708D00792401 /* NSObject+MJKeyValue.m in Sources */,
 				E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */,
 				E1F08F28199076B300792401 /* LGUserTool.m in Sources */,
+				E19FE2C71999F889006EE50D /* LGUnreadParam.m in Sources */,
+				E1588ED119949B8600EF0453 /* LGIconView.m in Sources */,
 				E1B2F339198C8A2200A36F4D /* AFXMLRequestOperation.m in Sources */,
 				E1F08F0C1990708D00792401 /* MJType.m in Sources */,
 				E1B2F335198C8A2200A36F4D /* AFJSONRequestOperation.m in Sources */,

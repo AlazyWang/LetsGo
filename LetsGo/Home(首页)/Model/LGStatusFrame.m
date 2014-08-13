@@ -54,7 +54,7 @@
     
     CGFloat iconX = IWCellBorderWidth;
     CGFloat iconY = IWCellBorderWidth;
-    _iconViewF = CGRectMake(iconX, iconY, 34, 34);
+    _iconViewF = CGRectMake(iconX, iconY, 42, 42);
     
     CGFloat nameX = CGRectGetMaxX(_iconViewF) + IWCellBorderWidth;
     CGFloat nameY = IWCellBorderWidth;

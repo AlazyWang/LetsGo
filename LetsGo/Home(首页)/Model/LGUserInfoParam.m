@@ -7,7 +7,17 @@
 //
 
 #import "LGUserInfoParam.h"
+#import "LGAccount.h"
+
 
 @implementation LGUserInfoParam
+
+- (id)init
+{
+    if (self = [super init]) {
+        _uid = [LGAccount currentAccount].uid;
+    }
+    return self;
+}
 
 @end

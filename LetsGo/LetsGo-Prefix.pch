@@ -80,5 +80,12 @@
 #define LGdockHight 35
 
 
+#define   LGRepeatKey     @"repeatKey"
+
+#define   LGRepeatClickPostName    @"repeatClickPostName"
+
+#define     LGSendStatusPostName       @"sendStatusPostName"
+
+
 
 #endif

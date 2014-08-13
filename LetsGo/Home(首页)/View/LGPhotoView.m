@@ -36,6 +36,7 @@
         
         _gifView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         [self addSubview:_gifView];
+ 
     }
     return self;
 }

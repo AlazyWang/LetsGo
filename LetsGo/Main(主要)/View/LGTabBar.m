@@ -11,7 +11,7 @@
 
 @interface LGTabBar ()
 @property(nonatomic,assign)int tabBarButtonCount;
-@property (nonatomic,strong)LGTabBarButton *selectBtn;
+@property (nonatomic,strong)UIButton *selectBtn;
 @end
 
 @implementation LGTabBar
@@ -33,25 +33,24 @@
     CGFloat btnW = self.frame.size.width / 5;
     btnX  = 2 *btnW;
 
-    
   
     [button setImage:[UIImage imageWithNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageWithNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
     
     CGFloat btnH = self.frame.size.height;
-    
+    button.tag = 10;
     button.frame = CGRectMake(btnX, 0, btnW, btnH);
-    [button addTarget:self action:@selector(btnPlus:) forControlEvents:UIControlEventTouchDown];
+    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
     
     
     [self addSubview:button];
 
 }
 
-- (void)btnPlus:(UIButton *)button
-{
-    
-}
+//- (void)btnPlus:(UIButton *)button
+//{
+//    
+//}
 
 - (void)addTabBarButtonWithItem:(UITabBarItem*)item
 {
@@ -78,7 +77,9 @@
     _tabBarButtonCount++;
 }
 
-- (void)btnClick:(LGTabBarButton *)button
+
+
+- (void)btnClick:(UIButton *)button
 {
     if ([_delegate respondsToSelector:@selector(tabBar:didSelectItemFrom:didSelectItemTo:)]) {
         [_delegate tabBar:self didSelectItemFrom:_selectBtn.tag didSelectItemTo:button.tag];

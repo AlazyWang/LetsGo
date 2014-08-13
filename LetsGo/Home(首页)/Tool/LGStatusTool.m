@@ -12,6 +12,10 @@
 #import "LGFriendStatusesResult.h"
 #import "MJExtension.h"
 #import "LGFriendStatusesParam.h"
+#import "LGUserStatusesParam.h"
+#import "LGUserStatusesResult.h"
+#import "LGSendParam.h"
+#import "LGUser.h"
 
 
 
@@ -39,6 +43,22 @@
     }];
 }
 
++ (void)sendStatusParam:(LGSendParam *)param success:(SendStatusSuccess)success failure:(HttpFailure)failure;
+{
+    NSDictionary *params = param.keyValues;
+    [LGHttpTool postWithURL:@"https://api.weibo.com/2/statuses/update.json" params:params success:^(id json) {
+        if (success) {
+            //            LGFriendStatusesResult *result = [LGFriendStatusesResult objectWithKeyValues:json];
+            LGUser *user = [[LGUser alloc]init];
+            [user setKeyValues:json];
+            success(user);
+            //            NSLog(@"--%@--",json);
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 + (void)statusesWithAccessParam:(LGFriendStatusesParam *)param success:(LGFriendStatusesSuccess)success failure:(HttpFailure)failure
 {
     NSDictionary *params = param.keyValues;
@@ -48,10 +68,28 @@
             LGFriendStatusesResult *result = [[LGFriendStatusesResult alloc]init];
             [result setKeyValues:json];
             success(result);
-            NSLog(@"--%@--",json);
+//            NSLog(@"--%@--",json);
         }
     } failure:^(NSError *error) {
         
     }];
 }
+
+
++ (void)userStatusesWithParam:(LGUserStatusesParam *)param success:(UserStatusSuccess)success failure:(HttpFailure)failure
+{
+    NSDictionary *params = param.keyValues;
+    
+    [LGHttpTool getWithURL:@"https://api.weibo.com/2/statuses/user_timeline.json" params:params success:^(id json) {
+        if (success) {
+            LGUserStatusesResult *result = [[LGUserStatusesResult alloc]init];
+            [result setKeyValues:json];
+            
+            success(result);
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 @end

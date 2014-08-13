@@ -39,6 +39,12 @@
         [navItem setBackgroundImage:[UIImage imageWithNamed:@"navigationbar_button_background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
         [navItem setBackgroundImage:[UIImage imageWithNamed:@"navigationbar_button_background_pushed"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
         [navItem setBackgroundImage:[UIImage imageWithNamed:@"navigationbar_button_background_disable"] forState:UIControlStateDisabled barMetrics:UIBarMetricsDefault];
+    } else
+    {
+        NSMutableDictionary *dicM = [NSMutableDictionary dictionary];
+        [dicM setObject:[UIColor grayColor] forKey:UITextAttributeTextColor];
+        
+        [navItem setTitleTextAttributes:dicM forState:UIControlStateDisabled];
     }
     NSMutableDictionary *navDict = [NSMutableDictionary dictionary];
     [navDict setObject:iOS7?[UIColor orangeColor] :[UIColor blackColor] forKey:UITextAttributeTextColor];

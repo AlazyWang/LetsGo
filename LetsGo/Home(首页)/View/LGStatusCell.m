@@ -14,11 +14,12 @@
 #import "UIImageView+WebCache.h"
 #import "LGPhotoListView.h"
 #import "LGStatusDock.h"
+#import "LGIconView.h"
 
 @interface LGStatusCell ()
 {
     /** 头像 */
-    UIImageView *_iconView;
+    LGIconView *_iconView;
     /** 昵称 */
     UILabel *_nameLabel;
     /** 时间 */
@@ -58,7 +59,7 @@
     
     
     _iconView.frame = statusFrame.iconViewF;
-    [_iconView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageWithNamed:@"avatar_default_small"]];
+    _iconView.user = user;
     
     _nameLabel.frame = statusFrame.nameLabelF;
     _nameLabel.text = user.name;
@@ -169,7 +170,7 @@
 
 - (void)setUpOriginSubViews
 {
-    _iconView = [[UIImageView alloc]init];
+    _iconView = [[LGIconView alloc]init];
     [self.contentView addSubview:_iconView];
 
     

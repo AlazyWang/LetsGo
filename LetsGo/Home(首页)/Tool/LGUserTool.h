@@ -19,4 +19,6 @@ typedef void(^LGUserInfoSuccess)(LGUser *user);
 
 + (void)userInfoParam:(LGUserInfoParam *)param success:(LGUserInfoSuccess)success failure:(HttpFailure)failure;
 
+
+
 @end

@@ -35,6 +35,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(sendStatusRefersh) name:LGSendStatusPostName object:nil];
+    
     self.arrayOfStatuesFrame = [NSMutableArray array];
     
     self.view.backgroundColor = LGglobalColor;
@@ -51,21 +54,7 @@
 //    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_pop" higlightedImage:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_friendsearch"  selectedImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(addFriends)];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithImageName:@"navigationbar_pop" selectedImageName:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
-//    [LGStatusTool statusesWithAccessToken:[LGAccount currentAccount].access_token success:^(NSArray *status) {
-//        self.arrayOfStatues = status;
-//        [self.tableView reloadData];
-//        
-//    } failure:^(NSError *error) {
-//        
-//    }];
-//    LGFriendStatusesParam *result = [[LGFriendStatusesParam alloc]init];
-//    result.access_token = [LGAccount currentAccount].access_token;
-//    [LGStatusTool statusesWithAccessParam:result success:^(LGFriendStatusesResult *result) {
-//        self.arrayOfStatues = result.statuses;
-//        [self.tableView reloadData];
-//    } failure:^(NSError *error) {
-//        
-//    }];
+
     
     
     LGUserInfoParam *param = [[LGUserInfoParam alloc]init];
@@ -76,9 +65,21 @@
         self.tabBarItem.title = @"首页";
     } failure:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(btnRepeatClick:) name:LGRepeatClickPostName object:nil];
      
 }
 
+- (void)sendStatusRefersh
+{
+    [_header beginRefreshing];
+}
+
+- (void)btnRepeatClick:(NSNotification *)nitification
+{
+    if (nitification.userInfo[LGRepeatKey] == self) {
+        [_header beginRefreshing];
+    }
+}
 
 - (void)setupRefrsh
 {
@@ -142,6 +143,9 @@
 
 - (void)loadNewStatues
 {
+    [UIApplication sharedApplication].applicationIconBadgeNumber -= [self.tabBarItem.badgeValue intValue];
+    self.tabBarItem.badgeValue = nil;
+    
     
     LGFriendStatusesParam *param = [[LGFriendStatusesParam alloc]init];
     if (_arrayOfStatuesFrame.count >0) {
