@@ -12,6 +12,7 @@
 #import "LGPhotoListView.h"
 
 #import "LGStatusDock.h"
+#import "LGIconView.h"
 
 @implementation LGStatusFrame
 
@@ -54,7 +55,8 @@
     
     CGFloat iconX = IWCellBorderWidth;
     CGFloat iconY = IWCellBorderWidth;
-    _iconViewF = CGRectMake(iconX, iconY, 42, 42);
+    CGSize iconSize = [LGIconView iconSizeWithIconType:LGIconTypeSmall];
+    _iconViewF = CGRectMake(iconX, iconY, iconSize.width, iconSize.height);
     
     CGFloat nameX = CGRectGetMaxX(_iconViewF) + IWCellBorderWidth;
     CGFloat nameY = IWCellBorderWidth;
@@ -68,7 +70,7 @@
     CGFloat contentX = iconX;
     CGFloat contentY = CGRectGetMaxY(_iconViewF) + IWCellBorderWidth;
     CGSize contentSize = [status.text sizeWithFont:IWContentFont constrainedToSize:CGSizeMake(cellWidth - 2 *IWCellBorderWidth, MAXFLOAT)];
-    _contentLabelF = CGRectMake(contentX, contentY, contentSize.width , contentSize.height);
+    _contentLabelF = CGRectMake(contentX, contentY, contentSize.width , contentSize.height + 12);
     
     if (status.pic_urls.count) {
         CGFloat photoListX = contentX;
@@ -92,7 +94,7 @@
         CGFloat retweetContentX = retweetNameX;
         CGFloat retweetContentY = CGRectGetMaxY(_retweetNameLabelF) + IWCellBorderWidth;
         CGSize retweetContentSize = [retweeted_status.text sizeWithFont:IWRetweetNameFont constrainedToSize:CGSizeMake(retweetWidth - 2 *IWCellBorderWidth , MAXFLOAT)];
-        _retweetContentLabelF = CGRectMake(retweetContentX, retweetContentY, retweetContentSize.width, retweetContentSize.height);
+        _retweetContentLabelF = CGRectMake(retweetContentX, retweetContentY, retweetContentSize.width, retweetContentSize.height + 8);
         
         if (retweeted_status.pic_urls.count) {
             CGFloat retweetPhotoListX = retweetContentX;

@@ -15,8 +15,10 @@
 #import "LGPhotoListView.h"
 #import "LGStatusDock.h"
 #import "LGIconView.h"
+#import "TQRichTextView.h"
 
-@interface LGStatusCell ()
+
+@interface LGStatusCell () <TQRichTextViewDelegate>
 {
     /** 头像 */
     LGIconView *_iconView;
@@ -27,7 +29,7 @@
     /** 来源 */
     UILabel *_sourceLabel;
     /** 内容 */
-    UILabel *_contentLabel;
+    TQRichTextView *_contentLabel;
     /** 配图 */
     LGPhotoListView *_photoListView;
     /** 微博会员图标 */
@@ -40,8 +42,8 @@
     /** 转发微博的配图 */
     LGPhotoListView *_retweetPhotoListView;
     /** 转发微博的内容 */
-    UILabel *_retweetContentLabel;
-    
+    TQRichTextView *_retweetContentLabel;
+
     LGStatusDock *_statusDock;
 }
 
@@ -59,7 +61,7 @@
     
     
     _iconView.frame = statusFrame.iconViewF;
-    _iconView.user = user;
+    [_iconView setUser:user iconType:LGIconTypeSmall];
     
     _nameLabel.frame = statusFrame.nameLabelF;
     _nameLabel.text = user.name;
@@ -158,7 +160,7 @@
 }
 
 
-+ (instancetype)cellWithTableView:(UITableView*)tableView
++ (instancetype)cellWithTableView:(UITableView *)tableView
 {
     static NSString *CellIdentifier = @"Cell";
     LGStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -194,11 +196,11 @@
     _sourceLabel.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_sourceLabel];
     
-    _contentLabel = [[UILabel alloc]init];
+    _contentLabel = [[TQRichTextView alloc]init];
+    _contentLabel.delegage = self;
     _contentLabel.font = IWNameFont;
     _contentLabel.textColor = IWContentColor;
     _contentLabel.backgroundColor = [UIColor clearColor];
-    _contentLabel.numberOfLines = 0;
     [self.contentView addSubview:_contentLabel];
     
     // 6.配图
@@ -227,10 +229,9 @@
     [_retweetView addSubview:_retweetNameLabel];
     
     // 2.内容
-    _retweetContentLabel = [[UILabel alloc] init];
+    _retweetContentLabel = [[TQRichTextView alloc] init];
     _retweetContentLabel.font = IWRetweetContentFont;
     _retweetContentLabel.textColor = IWRetweetContentColor;
-    _retweetContentLabel.numberOfLines = 0;
     _retweetContentLabel.backgroundColor = [UIColor clearColor];
     [_retweetView addSubview:_retweetContentLabel];
     
@@ -266,8 +267,19 @@
 }
 
 
-
-
+- (void)richTextView:(TQRichTextView *)view touchBeginRun:(TQRichTextRun *)run
+{
+    
+}
+- (void)richTextView:(TQRichTextView *)view touchEndRun:(TQRichTextRun *)run
+{
+    if ([run isKindOfClass:[TQRichTextRunURL class]])
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:run.text]];
+    }
+    
+    NSLog(@"%@",run.text);
+}
 
 
 

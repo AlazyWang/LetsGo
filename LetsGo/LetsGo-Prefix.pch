@@ -80,6 +80,17 @@
 #define LGdockHight 35
 
 
+// 认证图标的尺寸
+#define LGVertifyWH 18
+
+// 头像图片的尺寸
+#define LGIconWHDefault 50
+#define LGIconWHSmall 34
+#define LGIconWHBig 85
+
+
+
+
 #define   LGRepeatKey     @"repeatKey"
 
 #define   LGRepeatClickPostName    @"repeatClickPostName"

@@ -68,11 +68,11 @@
 - (void)setUpTopViews:(LGUser *)user
 {
     
-//    _iconView.user = user;
     
-//    _iconView.layer.shadowColor = [UIColor grayColor].CGColor;
-//    _iconView.layer.shadowOpacity = 0.5;
-//    _iconView.layer.shadowOffset = CGSizeMake(0, 2);
+    _iconView.layer.shadowColor = [UIColor grayColor].CGColor;
+    _iconView.layer.shadowOpacity = 0.5;
+    _iconView.layer.shadowOffset = CGSizeMake(0, 2);
+    [_iconView setUser:user iconType:LGIconTypeBig];
     
     if (_user.desc.length) {
         _detailLable.text = _user.desc;
@@ -148,12 +148,16 @@
 
 - (void)friendsClick
 {
-    
+    if ([self.delegate respondsToSelector:@selector(headViewFriendsClick:)]) {
+        [_delegate headViewFriendsClick:self];
+    }
 }
 
 - (void)followerClick
 {
-    
+    if ([self.delegate respondsToSelector:@selector(headViewFollowerClick:)]) {
+        [_delegate headViewFollowerClick:self];
+    }
 }
 
 - (void)addBottomBtn:(int)index number:(int)number tilte:(NSString *)title action:(SEL)action

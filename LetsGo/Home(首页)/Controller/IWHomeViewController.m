@@ -22,7 +22,9 @@
 #import "LGStatusCell.h"
 #import "LGStatusFrame.h"
 
-@interface IWHomeViewController () <MJRefreshBaseViewDelegate>
+#import "TQRichTextView.h"
+
+@interface IWHomeViewController () <MJRefreshBaseViewDelegate,TQRichTextViewDelegate>
 @property (nonatomic,strong)NSMutableArray *arrayOfStatuesFrame;
 
 @property (nonatomic,strong)MJRefreshHeaderView *header;
@@ -242,8 +244,10 @@
 {
 
     
+    
     LGStatusCell *cell = [LGStatusCell cellWithTableView:tableView];
     cell.statusFrame = _arrayOfStatuesFrame[indexPath.row];
+    
     
     return cell;
 }
@@ -255,13 +259,39 @@
 //    v1.view.backgroundColor = [UIColor grayColor];
 //    [self.navigationController pushViewController:v1 animated:YES];
     self.tabBarItem.badgeValue = @"90";
+    NSLog(@"55555555555555555");
 }
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [_arrayOfStatuesFrame[indexPath.row] cellHeight];
 }
+
+//- (void)richTextViewClickCell:(TQRichTextView *)view
+//{
+//    
+//    NSLog(@"%@",view.superview.superview.superview);
+////    UITableViewCell *cell = view.subviews;
+//    
+////    [self.tableView.delegate tableView:self.tableView didSelectRowAtIndexPath:(ui)view.subviews];
+//}
+
+//- (void)richTextView:(TQRichTextView *)view touchEndRun:(TQRichTextRun *)run
+//{
+//
+//}
+//- (void)richTextView:(TQRichTextView *)view touchBeginRun:(TQRichTextRun *)run
+//{
+//    if ([run isKindOfClass:[TQRichTextRunURL class]])
+//    {
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:run.text]];
+//    }
+//    
+//    NSLog(@"%@",run.text);
+//}
+
 
 
 

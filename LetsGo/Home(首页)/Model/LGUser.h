@@ -11,6 +11,9 @@ typedef enum {
     IWMBTypeYear // 年费
 } IWMBType;
 
+
+
+
 typedef enum {
     IWVerifiedTypeNone = - 1,
     IWVerifiedTypePersonal = 0,  // 个人认证
@@ -21,6 +24,7 @@ typedef enum {
 } IWVerifiedType;
 
 #import <Foundation/Foundation.h>
+@class LGStatus;
 
 @interface LGUser : NSObject
 /** string	字符串型的用户UID */
@@ -56,5 +60,15 @@ typedef enum {
 @property (nonatomic, assign) IWVerifiedType verified_type;
 /** string 	认证原因 */
 @property (nonatomic, copy) NSString *verified_reason;
+
+@property (nonatomic,strong)LGStatus *status;
+
+
+/** YES:登录用户有关注他 */
+@property (nonatomic, assign) BOOL following;
+
+/** 该用户是否关注当前登录用户，true：是，false：否 */
+@property (nonatomic, assign) BOOL follow_me;
+
 
 @end

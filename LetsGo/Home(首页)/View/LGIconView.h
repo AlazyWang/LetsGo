@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+
+typedef enum {
+    LGIconTypeDefault,
+    LGIconTypeBig,
+    LGIconTypeSmall
+} LGIconType;
+
 @class LGUser;
 @interface LGIconView : UIView
 
 @property(nonatomic,strong)LGUser *user;
+@property(nonatomic,assign)LGIconType iconType;
+
++ (CGSize)iconSizeWithIconType:(LGIconType)iconType;
+
+- (void)setUser:(LGUser *)user iconType:(LGIconType )iconType;
 
 @end

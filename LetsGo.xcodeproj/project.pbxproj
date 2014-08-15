@@ -44,6 +44,17 @@
 		E1CA5050198A20B500A8E050 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA503B198A20B500A8E050 /* IWMeViewController.m */; };
 		E1CA5051198A20B500A8E050 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA5041198A20B500A8E050 /* IWMessageViewController.m */; };
 		E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */; };
+		E1CE36BA199C64DE00F7E498 /* LGFriendshipTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36B9199C64DE00F7E498 /* LGFriendshipTool.m */; };
+		E1CE36BD199C653400F7E498 /* LGfriendParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36BC199C653400F7E498 /* LGfriendParam.m */; };
+		E1CE36C0199C654B00F7E498 /* LGfriendResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36BF199C654B00F7E498 /* LGfriendResult.m */; };
+		E1CE36C2199C69A800F7E498 /* LGFriendShipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CE36C1199C69A800F7E498 /* LGFriendShipCell.xib */; };
+		E1CE36C5199C6A0200F7E498 /* LGFriendShipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36C4199C6A0200F7E498 /* LGFriendShipCell.m */; };
+		E1CE36C8199CA63000F7E498 /* LGFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36C7199CA63000F7E498 /* LGFriendViewController.m */; };
+		E1CE36CB199CB1F700F7E498 /* LGFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CE36CA199CB1F700F7E498 /* LGFollowViewController.m */; };
+		E1CE36CF199CB3CD00F7E498 /* emoticons.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1CE36CC199CB3CD00F7E498 /* emoticons.plist */; };
+		E1CE36D0199CB3CD00F7E498 /* profile_cover_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1CE36CD199CB3CD00F7E498 /* profile_cover_background.jpg */; };
+		E1CE36D1199CB3CD00F7E498 /* profile_cover_background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1CE36CE199CB3CD00F7E498 /* profile_cover_background@2x.jpg */; };
+		E1CE36D3199CBDE500F7E498 /* LaraCroft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1CE36D2199CBDE500F7E498 /* LaraCroft@2x.png */; };
 		E1D0F923199757AB00057087 /* LGSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D0F922199757AB00057087 /* LGSendViewController.m */; };
 		E1D0F92619975FA100057087 /* LGTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D0F92519975FA100057087 /* LGTextView.m */; };
 		E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D5237B19932B1E002957AA /* LGPhoto.m */; };
@@ -104,6 +115,11 @@
 		E1FDFA42196A85A300B40A48 /* LetsGoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FDFA41196A85A300B40A48 /* LetsGoTests.m */; };
 		E1FDFA56196A8FB800B40A48 /* LGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FDFA55196A8FB800B40A48 /* LGTabBarController.m */; };
 		E1FDFA5B196A905000B40A48 /* LGNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FDFA5A196A905000B40A48 /* LGNavgationController.m */; };
+		E1FE16D3199D9AC9008F107F /* TQRichTextRun.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE16C7199D9AC9008F107F /* TQRichTextRun.m */; };
+		E1FE16D4199D9AC9008F107F /* TQRichTextRunDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE16C9199D9AC9008F107F /* TQRichTextRunDelegate.m */; };
+		E1FE16D5199D9AC9008F107F /* TQRichTextRunEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE16CB199D9AC9008F107F /* TQRichTextRunEmoji.m */; };
+		E1FE16D6199D9AC9008F107F /* TQRichTextRunURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE16CD199D9AC9008F107F /* TQRichTextRunURL.m */; };
+		E1FE16D7199D9AC9008F107F /* TQRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE16CF199D9AC9008F107F /* TQRichTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +204,23 @@
 		E1CA5041198A20B500A8E050 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
 		E1CA504B198A20B500A8E050 /* IWSqaureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSqaureViewController.h; sourceTree = "<group>"; };
 		E1CA504C198A20B500A8E050 /* IWSqaureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSqaureViewController.m; sourceTree = "<group>"; };
+		E1CE36B8199C64DE00F7E498 /* LGFriendshipTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFriendshipTool.h; sourceTree = "<group>"; };
+		E1CE36B9199C64DE00F7E498 /* LGFriendshipTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFriendshipTool.m; sourceTree = "<group>"; };
+		E1CE36BB199C653400F7E498 /* LGfriendParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGfriendParam.h; sourceTree = "<group>"; };
+		E1CE36BC199C653400F7E498 /* LGfriendParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGfriendParam.m; sourceTree = "<group>"; };
+		E1CE36BE199C654B00F7E498 /* LGfriendResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGfriendResult.h; sourceTree = "<group>"; };
+		E1CE36BF199C654B00F7E498 /* LGfriendResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGfriendResult.m; sourceTree = "<group>"; };
+		E1CE36C1199C69A800F7E498 /* LGFriendShipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LGFriendShipCell.xib; sourceTree = "<group>"; };
+		E1CE36C3199C6A0200F7E498 /* LGFriendShipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFriendShipCell.h; sourceTree = "<group>"; };
+		E1CE36C4199C6A0200F7E498 /* LGFriendShipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFriendShipCell.m; sourceTree = "<group>"; };
+		E1CE36C6199CA63000F7E498 /* LGFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFriendViewController.h; sourceTree = "<group>"; };
+		E1CE36C7199CA63000F7E498 /* LGFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFriendViewController.m; sourceTree = "<group>"; };
+		E1CE36C9199CB1F700F7E498 /* LGFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGFollowViewController.h; sourceTree = "<group>"; };
+		E1CE36CA199CB1F700F7E498 /* LGFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGFollowViewController.m; sourceTree = "<group>"; };
+		E1CE36CC199CB3CD00F7E498 /* emoticons.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = emoticons.plist; sourceTree = "<group>"; };
+		E1CE36CD199CB3CD00F7E498 /* profile_cover_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_cover_background.jpg; sourceTree = "<group>"; };
+		E1CE36CE199CB3CD00F7E498 /* profile_cover_background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile_cover_background@2x.jpg"; sourceTree = "<group>"; };
+		E1CE36D2199CBDE500F7E498 /* LaraCroft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaraCroft@2x.png"; sourceTree = "<group>"; };
 		E1D0F921199757AB00057087 /* LGSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSendViewController.h; sourceTree = "<group>"; };
 		E1D0F922199757AB00057087 /* LGSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSendViewController.m; sourceTree = "<group>"; };
 		E1D0F92419975FA100057087 /* LGTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTextView.h; sourceTree = "<group>"; };
@@ -301,6 +334,16 @@
 		E1FDFA55196A8FB800B40A48 /* LGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTabBarController.m; sourceTree = "<group>"; };
 		E1FDFA59196A905000B40A48 /* LGNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGNavgationController.h; sourceTree = "<group>"; };
 		E1FDFA5A196A905000B40A48 /* LGNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGNavgationController.m; sourceTree = "<group>"; };
+		E1FE16C6199D9AC9008F107F /* TQRichTextRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextRun.h; sourceTree = "<group>"; };
+		E1FE16C7199D9AC9008F107F /* TQRichTextRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextRun.m; sourceTree = "<group>"; };
+		E1FE16C8199D9AC9008F107F /* TQRichTextRunDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextRunDelegate.h; sourceTree = "<group>"; };
+		E1FE16C9199D9AC9008F107F /* TQRichTextRunDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextRunDelegate.m; sourceTree = "<group>"; };
+		E1FE16CA199D9AC9008F107F /* TQRichTextRunEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextRunEmoji.h; sourceTree = "<group>"; };
+		E1FE16CB199D9AC9008F107F /* TQRichTextRunEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextRunEmoji.m; sourceTree = "<group>"; };
+		E1FE16CC199D9AC9008F107F /* TQRichTextRunURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextRunURL.h; sourceTree = "<group>"; };
+		E1FE16CD199D9AC9008F107F /* TQRichTextRunURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextRunURL.m; sourceTree = "<group>"; };
+		E1FE16CE199D9AC9008F107F /* TQRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQRichTextView.h; sourceTree = "<group>"; };
+		E1FE16CF199D9AC9008F107F /* TQRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQRichTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +431,7 @@
 		E1B2F317198C8A0900A36F4D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E1FE16C1199D9AC9008F107F /* TQRichTextView */,
 				E1F08ECD1990708D00792401 /* MJExtension */,
 				E1F08EE11990708D00792401 /* MJRefresh */,
 				E1F08EEC1990708D00792401 /* SDWebImage */,
@@ -502,6 +546,7 @@
 		E1CA5038198A20B500A8E050 /* Me(我) */ = {
 			isa = PBXGroup;
 			children = (
+				E1CE36B7199C64A800F7E498 /* Tool */,
 				E1CA5039198A20B500A8E050 /* Controller */,
 				E1CA503C198A20B500A8E050 /* Model */,
 				E1CA503D198A20B500A8E050 /* View */,
@@ -516,6 +561,10 @@
 				E1CA503B198A20B500A8E050 /* IWMeViewController.m */,
 				E1E886A2199B4F02004C6BAB /* LGStatusesViewController.h */,
 				E1E886A3199B4F02004C6BAB /* LGStatusesViewController.m */,
+				E1CE36C6199CA63000F7E498 /* LGFriendViewController.h */,
+				E1CE36C7199CA63000F7E498 /* LGFriendViewController.m */,
+				E1CE36C9199CB1F700F7E498 /* LGFollowViewController.h */,
+				E1CE36CA199CB1F700F7E498 /* LGFollowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -527,6 +576,10 @@
 				E1E8869D199B37BF004C6BAB /* LGUserStatusesParam.m */,
 				E1E8869F199B388E004C6BAB /* LGUserStatusesResult.h */,
 				E1E886A0199B388E004C6BAB /* LGUserStatusesResult.m */,
+				E1CE36BB199C653400F7E498 /* LGfriendParam.h */,
+				E1CE36BC199C653400F7E498 /* LGfriendParam.m */,
+				E1CE36BE199C654B00F7E498 /* LGfriendResult.h */,
+				E1CE36BF199C654B00F7E498 /* LGfriendResult.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,6 +596,9 @@
 				E1E88697199B15B7004C6BAB /* LGMoreBtn.m */,
 				E1E88699199B163C004C6BAB /* LGBaseBtn.h */,
 				E1E8869A199B163C004C6BAB /* LGBaseBtn.m */,
+				E1CE36C1199C69A800F7E498 /* LGFriendShipCell.xib */,
+				E1CE36C3199C6A0200F7E498 /* LGFriendShipCell.h */,
+				E1CE36C4199C6A0200F7E498 /* LGFriendShipCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,6 +669,15 @@
 				E10E7A06198B325E002DEC69 /* LGSearch.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E1CE36B7199C64A800F7E498 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E1CE36B8199C64DE00F7E498 /* LGFriendshipTool.h */,
+				E1CE36B9199C64DE00F7E498 /* LGFriendshipTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		E1D0F91D1997575200057087 /* Send(发微博) */ = {
@@ -778,6 +843,10 @@
 		E1FDFA23196A85A300B40A48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1CE36D2199CBDE500F7E498 /* LaraCroft@2x.png */,
+				E1CE36CC199CB3CD00F7E498 /* emoticons.plist */,
+				E1CE36CD199CB3CD00F7E498 /* profile_cover_background.jpg */,
+				E1CE36CE199CB3CD00F7E498 /* profile_cover_background@2x.jpg */,
 				E1CA50261989E78600A8E050 /* Default-568h@2x.png */,
 				E1CA50271989E78600A8E050 /* Default.png */,
 				E1CA50281989E78600A8E050 /* Default@2x.png */,
@@ -861,6 +930,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E1FE16C1199D9AC9008F107F /* TQRichTextView */ = {
+			isa = PBXGroup;
+			children = (
+				E1FE16C6199D9AC9008F107F /* TQRichTextRun.h */,
+				E1FE16C7199D9AC9008F107F /* TQRichTextRun.m */,
+				E1FE16C8199D9AC9008F107F /* TQRichTextRunDelegate.h */,
+				E1FE16C9199D9AC9008F107F /* TQRichTextRunDelegate.m */,
+				E1FE16CA199D9AC9008F107F /* TQRichTextRunEmoji.h */,
+				E1FE16CB199D9AC9008F107F /* TQRichTextRunEmoji.m */,
+				E1FE16CC199D9AC9008F107F /* TQRichTextRunURL.h */,
+				E1FE16CD199D9AC9008F107F /* TQRichTextRunURL.m */,
+				E1FE16CE199D9AC9008F107F /* TQRichTextView.h */,
+				E1FE16CF199D9AC9008F107F /* TQRichTextView.m */,
+			);
+			path = TQRichTextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -937,9 +1023,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CE36D0199CB3CD00F7E498 /* profile_cover_background.jpg in Resources */,
 				E1FDFA27196A85A300B40A48 /* InfoPlist.strings in Resources */,
+				E1CE36C2199C69A800F7E498 /* LGFriendShipCell.xib in Resources */,
+				E1CE36CF199CB3CD00F7E498 /* emoticons.plist in Resources */,
 				E1FDFA2F196A85A300B40A48 /* Images.xcassets in Resources */,
 				E1F08F111990708D00792401 /* MJRefresh.bundle in Resources */,
+				E1CE36D1199CB3CD00F7E498 /* profile_cover_background@2x.jpg in Resources */,
+				E1CE36D3199CBDE500F7E498 /* LaraCroft@2x.png in Resources */,
 				E1CA502B1989E78600A8E050 /* Default@2x.png in Resources */,
 				E1CA50291989E78600A8E050 /* Default-568h@2x.png in Resources */,
 				E1CA502A1989E78600A8E050 /* Default.png in Resources */,
@@ -964,13 +1055,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D5237F19932B68002957AA /* LGPhotoListView.m in Sources */,
+				E1CE36C0199C654B00F7E498 /* LGfriendResult.m in Sources */,
 				E1E8869E199B37BF004C6BAB /* LGUserStatusesParam.m in Sources */,
+				E1FE16D4199D9AC9008F107F /* TQRichTextRunDelegate.m in Sources */,
 				E1F08F1F1990708D00792401 /* UIImage+GIF.m in Sources */,
 				E1E886A4199B4F02004C6BAB /* LGStatusesViewController.m in Sources */,
 				E1E886A7199B5E43004C6BAB /* LGSendParam.m in Sources */,
 				E122758D198C920F00AA1F23 /* LGAccount.m in Sources */,
 				E19FE2C41999F7D8006EE50D /* LGBaseParam.m in Sources */,
 				E1F08F081990708D00792401 /* MJArgument.m in Sources */,
+				E1FE16D6199D9AC9008F107F /* TQRichTextRunURL.m in Sources */,
 				E1F08F151990708D00792401 /* MJRefreshHeaderView.m in Sources */,
 				E1F08F1C1990708D00792401 /* SDWebImageManager.m in Sources */,
 				E1E88695199B009E004C6BAB /* LGNumber.m in Sources */,
@@ -989,7 +1083,9 @@
 				E1F08F211990708D00792401 /* UIImage+WebP.m in Sources */,
 				E1227596198CCA8000AA1F23 /* LGStatus.m in Sources */,
 				E1F08F141990708D00792401 /* MJRefreshFooterView.m in Sources */,
+				E1CE36BA199C64DE00F7E498 /* LGFriendshipTool.m in Sources */,
 				E1CA502E1989EDDB00A8E050 /* UIImage+LG.m in Sources */,
+				E1FE16D5199D9AC9008F107F /* TQRichTextRunEmoji.m in Sources */,
 				E1D0F923199757AB00057087 /* LGSendViewController.m in Sources */,
 				E1227593198CCA7100AA1F23 /* LGUser.m in Sources */,
 				E1B2F336198C8A2200A36F4D /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -998,6 +1094,7 @@
 				E1B2F33B198C8A2200A36F4D /* MBProgressHUD+Add.m in Sources */,
 				E1F08F091990708D00792401 /* MJIvar.m in Sources */,
 				E1E886A1199B388E004C6BAB /* LGUserStatusesResult.m in Sources */,
+				E1CE36C8199CA63000F7E498 /* LGFriendViewController.m in Sources */,
 				E1DA52E81991BD490019E5D1 /* LGStatusCell.m in Sources */,
 				E1B2F334198C8A2200A36F4D /* AFImageRequestOperation.m in Sources */,
 				E1B2F338198C8A2200A36F4D /* AFURLConnectionOperation.m in Sources */,
@@ -1008,20 +1105,24 @@
 				E10E7A07198B325E002DEC69 /* LGSearch.m in Sources */,
 				E1FDFA5B196A905000B40A48 /* LGNavgationController.m in Sources */,
 				E1F08F221990708D00792401 /* UIImageView+WebCache.m in Sources */,
+				E1CE36C5199C6A0200F7E498 /* LGFriendShipCell.m in Sources */,
 				E19FE2CA1999F9C2006EE50D /* LGUnreadResult.m in Sources */,
 				E1F08F171990708D00792401 /* SDImageCache.m in Sources */,
 				E1F08F181990708D00792401 /* SDWebImageCompat.m in Sources */,
 				E1FDFA29196A85A300B40A48 /* main.m in Sources */,
 				E1F08F1D1990708D00792401 /* SDWebImagePrefetcher.m in Sources */,
 				E1F08F201990708D00792401 /* UIImage+MultiFormat.m in Sources */,
+				E1FE16D3199D9AC9008F107F /* TQRichTextRun.m in Sources */,
 				E1F08F191990708D00792401 /* SDWebImageDecoder.m in Sources */,
 				E1CA5054198A20B500A8E050 /* IWSqaureViewController.m in Sources */,
 				E1B2F33D198C8A2200A36F4D /* MBProgressHUD.m in Sources */,
+				E1FE16D7199D9AC9008F107F /* TQRichTextView.m in Sources */,
 				E1CA504F198A20B500A8E050 /* IWHomeViewController.m in Sources */,
 				E122759A198CCB6900AA1F23 /* LGStatusTool.m in Sources */,
 				E1F08F0D1990708D00792401 /* MJTypeEncoding.m in Sources */,
 				E1F08F0F1990708D00792401 /* NSObject+MJKeyValue.m in Sources */,
 				E1D5237C19932B1E002957AA /* LGPhoto.m in Sources */,
+				E1CE36BD199C653400F7E498 /* LGfriendParam.m in Sources */,
 				E1F08F28199076B300792401 /* LGUserTool.m in Sources */,
 				E19FE2C71999F889006EE50D /* LGUnreadParam.m in Sources */,
 				E1588ED119949B8600EF0453 /* LGIconView.m in Sources */,
@@ -1038,6 +1139,7 @@
 				E1F08F131990708D00792401 /* MJRefreshConst.m in Sources */,
 				E1FDFA2D196A85A300B40A48 /* LGAppDelegate.m in Sources */,
 				E1DA52EB1991CCBE0019E5D1 /* LGStatusFrame.m in Sources */,
+				E1CE36CB199CB1F700F7E498 /* LGFollowViewController.m in Sources */,
 				E1F08F1B1990708D00792401 /* SDWebImageDownloaderOperation.m in Sources */,
 				E1B2F337198C8A2200A36F4D /* AFPropertyListRequestOperation.m in Sources */,
 				E1F08F1A1990708D00792401 /* SDWebImageDownloader.m in Sources */,

@@ -94,7 +94,7 @@
 
 - (void)btnClick
 {
-    NSLog(@"-----------------");
+   
 }
 
 - (void)setStatus:(LGStatus *)status
