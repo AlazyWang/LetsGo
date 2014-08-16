@@ -67,6 +67,11 @@
 }
 
 - (id<SDWebImageOperation>)downloadWithURL:(NSURL *)url options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedWithFinishedBlock)completedBlock
+{
+    return [self downloadWithURL:url options:options progress:progressBlock completed:completedBlock dealed:nil];
+}
+
+- (id<SDWebImageOperation>)downloadWithURL:(NSURL *)url options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedWithFinishedBlock)completedBlock dealed:(MJWebImageDealedBlock)dealedBlock
 {    
     // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, XCode won't
     // throw any warning for this type mismatch. Here we failsafe this error by allowing URLs to be passed as NSString.
@@ -217,7 +222,7 @@
                         [self.runningOperations removeObject:operation];
                     }
                 }
-            }];
+            } dealed:dealedBlock];
             operation.cancelBlock = ^{[subOperation cancel];};
         }
         else if (image)

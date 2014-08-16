@@ -259,8 +259,6 @@
     }
 }
 
-
-
 #pragma mark -
 
 + (NSMutableAttributedString *)createAttributedStringWithText:(NSString *)text font:(UIFont *)font lineSpace:(CGFloat)lineSpace

@@ -111,6 +111,11 @@ static NSString *const kCompletedCallbackKey = @"completed";
 
 - (id<SDWebImageOperation>)downloadImageWithURL:(NSURL *)url options:(SDWebImageDownloaderOptions)options progress:(void (^)(NSUInteger, long long))progressBlock completed:(void (^)(UIImage *, NSData *, NSError *, BOOL))completedBlock
 {
+    return [self downloadImageWithURL:url options:options progress:progressBlock completed:completedBlock dealed:nil];
+}
+
+- (id<SDWebImageOperation>)downloadImageWithURL:(NSURL *)url options:(SDWebImageDownloaderOptions)options progress:(void (^)(NSUInteger, long long))progressBlock completed:(void (^)(UIImage *, NSData *, NSError *, BOOL))completedBlock dealed:(MJWebImageDealedBlock)dealedBlock
+{
     __block SDWebImageDownloaderOperation *operation;
     __weak SDWebImageDownloader *wself = self;
 
@@ -152,7 +157,9 @@ static NSString *const kCompletedCallbackKey = @"completed";
             if (!wself) return;
             SDWebImageDownloader *sself = wself;
             [sself removeCallbacksForURL:url];
-        }];
+        }
+        dealed:dealedBlock];
+        
         [wself.downloadQueue addOperation:operation];
         if (wself.executionOrder == SDWebImageDownloaderLIFOExecutionOrder)
         {

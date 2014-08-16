@@ -12,6 +12,8 @@
 
 #import "MJExtension.h"
 #import "LGPhotoView.h"
+#import "MJPhoto.h"
+#import "MJPhotoBrowser.h"
 
 #define LGPhotoMaxCount 9
 #define LGPhotoWH 85
@@ -29,6 +31,7 @@
         self.backgroundColor = [UIColor clearColor];
         for (int i = 0; i < LGPhotoMaxCount; i++) {
             LGPhotoView *photoView = [[LGPhotoView alloc]init];
+            photoView.userInteractionEnabled = YES;
             [self addSubview:photoView];
         }
     }
@@ -73,12 +76,38 @@
 //            
 //            [imageView setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageWithNamed:@"timeline_image_loading"]];
             
+            imageView.tag = i;
+            
+            
+            [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage:)]];
             
         } else
         {
             imageView.hidden = YES;
         }
     }
+    
+}
+
+- (void)tapImage:(UITapGestureRecognizer *)tap
+{
+    int count = _pic_urls.count;
+    NSMutableArray *photos = [NSMutableArray arrayWithCapacity:count];
+    
+    for (int i = 0; i < count; i ++) {
+        NSString *url = [[(LGPhoto *)_pic_urls[i] thumbnail_pic] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        MJPhoto *photo = [[MJPhoto alloc]init];
+        
+        photo.url = [NSURL URLWithString:url];
+        
+        photo.srcImageView = (UIImageView *)tap.view;
+        [photos addObject:photo];
+    }
+    
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc]init];
+    browser.currentPhotoIndex = tap.view.tag;
+    browser.photos = photos;
+    [browser show];
     
 }
 

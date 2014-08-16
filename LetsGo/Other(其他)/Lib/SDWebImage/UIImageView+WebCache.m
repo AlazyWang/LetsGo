@@ -46,6 +46,11 @@ static char operationArrayKey;
 
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedBlock)completedBlock
 {
+    [self setImageWithURL:url placeholderImage:placeholder options:options progress:progressBlock completed:completedBlock dealedBlock:nil];
+}
+
+- (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletedBlock)completedBlock dealedBlock:(MJWebImageDealedBlock)dealedBlock
+{
     [self cancelCurrentImageLoad];
 
     self.image = placeholder;
@@ -70,7 +75,7 @@ static char operationArrayKey;
                     completedBlock(image, error, cacheType);
                 }
             });
-        }];
+        } dealed:dealedBlock];
         objc_setAssociatedObject(self, &operationKey, operation, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }

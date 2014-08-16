@@ -14,6 +14,7 @@
 @interface SDWebImageDownloaderOperation ()
 
 @property (copy, nonatomic) SDWebImageDownloaderProgressBlock progressBlock;
+@property (copy, nonatomic) MJWebImageDealedBlock dealedBlock;
 @property (copy, nonatomic) SDWebImageDownloaderCompletedBlock completedBlock;
 @property (copy, nonatomic) void (^cancelBlock)();
 
@@ -33,6 +34,11 @@
 
 - (id)initWithRequest:(NSURLRequest *)request options:(SDWebImageDownloaderOptions)options progress:(void (^)(NSUInteger, long long))progressBlock completed:(void (^)(UIImage *, NSData *, NSError *, BOOL))completedBlock cancelled:(void (^)())cancelBlock
 {
+    return [self initWithRequest:request options:options progress:progressBlock completed:completedBlock cancelled:cancelBlock dealed:nil];
+}
+
+- (id)initWithRequest:(NSURLRequest *)request options:(SDWebImageDownloaderOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageDownloaderCompletedBlock)completedBlock cancelled:(void (^)())cancelBlock dealed:(MJWebImageDealedBlock)dealedBlock
+{
     if ((self = [super init]))
     {
         _request = request;
@@ -40,6 +46,7 @@
         _progressBlock = [progressBlock copy];
         _completedBlock = [completedBlock copy];
         _cancelBlock = [cancelBlock copy];
+        _dealedBlock = [dealedBlock copy];
         _executing = NO;
         _finished = NO;
         _expectedSize = 0;
@@ -272,15 +279,11 @@
 
     if (completionBlock)
     {
-        if (self.options & SDWebImageDownloaderIgnoreCachedResponse && responseFromCached)
-        {
+        if (self.options & SDWebImageDownloaderIgnoreCachedResponse && responseFromCached) {
             completionBlock(nil, nil, nil, YES);
             self.completionBlock = nil;
             [self done];
-        }
-        else
-        {
-            
+        } else {
             UIImage *image = [UIImage sd_imageWithData:self.imageData];
             
             image = [self scaledImageForKey:self.request.URL.absoluteString image:image];
@@ -289,13 +292,18 @@
             {
                 image = [UIImage decodedImageWithImage:image];
             }
-            
+
             if (CGSizeEqualToSize(image.size, CGSizeZero))
             {
                 completionBlock(nil, nil, [NSError errorWithDomain:@"SDWebImageErrorDomain" code:0 userInfo:@{NSLocalizedDescriptionKey: @"Downloaded image has 0 pixels"}], YES);
             }
             else
             {
+                #warning 图片处理
+                if (_dealedBlock) {
+                    self.imageData = _dealedBlock(image, self.imageData);
+                    image = [UIImage imageWithData:self.imageData];
+                }
                 completionBlock(image, self.imageData, nil, YES);
             }
             self.completionBlock = nil;

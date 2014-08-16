@@ -218,6 +218,7 @@
 {
     // 0.整体
     _retweetView = [[UIImageView alloc] init];
+    _retweetView.userInteractionEnabled = YES;
     _retweetView.image = [UIImage resizeWithName:@"timeline_retweet_background" width:0.9 hight:0.5];
     [self.contentView addSubview:_retweetView];
     
@@ -233,6 +234,7 @@
     _retweetContentLabel.font = IWRetweetContentFont;
     _retweetContentLabel.textColor = IWRetweetContentColor;
     _retweetContentLabel.backgroundColor = [UIColor clearColor];
+    _retweetContentLabel.delegage = self;
     [_retweetView addSubview:_retweetContentLabel];
     
     // 3.配图

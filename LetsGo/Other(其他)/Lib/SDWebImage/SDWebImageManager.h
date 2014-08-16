@@ -43,8 +43,8 @@ typedef enum
     SDWebImageRefreshCached = 1 << 4
 } SDWebImageOptions;
 
-typedef void(^SDWebImageCompletedBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType);
-typedef void(^SDWebImageCompletedWithFinishedBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished);
+typedef void (^SDWebImageCompletedBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType);
+typedef void (^SDWebImageCompletedWithFinishedBlock)(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished);
 
 
 @class SDWebImageManager;
@@ -158,6 +158,12 @@ SDWebImageManager *manager = [SDWebImageManager sharedManager];
                                    options:(SDWebImageOptions)options
                                   progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                  completed:(SDWebImageCompletedWithFinishedBlock)completedBlock;
+
+- (id<SDWebImageOperation>)downloadWithURL:(NSURL *)url
+                                   options:(SDWebImageOptions)options
+                                  progress:(SDWebImageDownloaderProgressBlock)progressBlock
+                                 completed:(SDWebImageCompletedWithFinishedBlock)completedBlock
+                                dealed:(MJWebImageDealedBlock)dealedBlock;
 
 /**
  * Cancel all current opreations

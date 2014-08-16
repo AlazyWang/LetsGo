@@ -41,6 +41,8 @@ typedef enum
 extern NSString *const SDWebImageDownloadStartNotification;
 extern NSString *const SDWebImageDownloadStopNotification;
 
+// 图片处理
+typedef NSMutableData * (^MJWebImageDealedBlock)(UIImage *image, NSData *data);
 typedef void(^SDWebImageDownloaderProgressBlock)(NSUInteger receivedSize, long long expectedSize);
 typedef void(^SDWebImageDownloaderCompletedBlock)(UIImage *image, NSData *data, NSError *error, BOOL finished);
 
@@ -98,5 +100,11 @@ typedef void(^SDWebImageDownloaderCompletedBlock)(UIImage *image, NSData *data, 
                                         options:(SDWebImageDownloaderOptions)options
                                        progress:(SDWebImageDownloaderProgressBlock)progressBlock
                                       completed:(SDWebImageDownloaderCompletedBlock)completedBlock;
+
+- (id<SDWebImageOperation>)downloadImageWithURL:(NSURL *)url
+                                        options:(SDWebImageDownloaderOptions)options
+                                       progress:(SDWebImageDownloaderProgressBlock)progressBlock
+                                      completed:(SDWebImageDownloaderCompletedBlock)completedBlock
+                                      dealed:(MJWebImageDealedBlock)dealedBlock;
 
 @end

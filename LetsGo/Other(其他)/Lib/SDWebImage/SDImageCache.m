@@ -145,7 +145,6 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         dispatch_async(self.ioQueue, ^
         {
             NSData *data = imageData;
-
             if (!data)
             {
                 if (image)
@@ -233,15 +232,12 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 - (UIImage *)diskImageForKey:(NSString *)key
 {
     NSData *data = [self diskImageDataBySearchingAllPathsForKey:key];
-    if (data)
-    {
+    if (data) {
         UIImage *image = [UIImage sd_imageWithData:data];
         image = [self scaledImageForKey:key image:image];
         image = [UIImage decodedImageWithImage:image];
         return image;
-    }
-    else
-    {
+    } else {
         return nil;
     }
 }
